@@ -1,7 +1,7 @@
-DROP DATABASE newshopperdb;
-CREATE DATABASE newshopperdb;
+DROP DATABASE newshopper;
+CREATE DATABASE newshopper;
 
-\c newshopperdb
+\c newshopper
 
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS comments;
