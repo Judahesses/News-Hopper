@@ -6,9 +6,9 @@ class HomePage extends Component {
 
  render() {
    return(
-    <div className="categories">
-      <Link to="/technology">technology</Link>
-    </div>
+      <div className="categories">
+        <Link to="/technology">technology</Link>
+      </div>
    );
  }
 }

@@ -1,9 +1,4 @@
-
-body {
-    background-color: black;
- }
- 
- .tech, .business, .politics, .sports, .culture {
+.tech, .business, .politics, .sports, .culture {
     border-style: solid;
     border-color: white;
     background-color: white;
