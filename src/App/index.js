@@ -7,7 +7,6 @@ import PoliticsPage from '../PoliticsPage';
 import EntertainmentPage from '../EntertainmentPage';
 import SportsPage from '../SportsPage';
 import SciencePage from '../SciencePage';
-import HealthPage from '../HealthPage';
 import HomePage from "../HomePage";
 
 class App extends Component {
@@ -25,7 +24,6 @@ class App extends Component {
         <Route path='/entertainment' component={EntertainmentPage} />
         <Route path='/sports' component={SportsPage} />
         <Route path='/science' component={SciencePage} />
-        <Route path='/health' component={HealthPage} />
       </div>
     </Router>
    );
