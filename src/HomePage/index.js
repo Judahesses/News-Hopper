@@ -13,7 +13,6 @@ class HomePage extends Component {
         <Link to="/entertainment">Entertainment</Link>
         <Link to="/sports">Sports</Link>
         <Link to="/science">Science</Link>
-        <Link to="/health">Health</Link>
       </div>
    );
  }
