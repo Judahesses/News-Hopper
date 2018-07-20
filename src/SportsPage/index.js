@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
-import moment from 'moment'
+import moment from 'moment';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class SportsPage extends Component {
   constructor(props) {
@@ -23,6 +24,16 @@ class SportsPage extends Component {
   render() {
     return (
       <div className='SportsPage'>
+        <nav className='nav'>
+          <p><Link className='home' to='/'>Home</Link></p>
+            <nav className='nav-categories'>
+              <Link to="/technology" className="technology-link">Technology</Link>
+              <Link to="/business" className="business-link">Business</Link>
+              <Link to="/politics" className="politics-link">Politics</Link>
+              <Link to="/entertainment" className="entertainment-link">Entertainment</Link>
+              <Link to="/science" className="science-link">Science</Link>
+            </nav>
+        </nav>
         <h2 className='page-title'>Sports</h2>
           <div className='container'> 
             {this.state.sportsNews.map(article => 

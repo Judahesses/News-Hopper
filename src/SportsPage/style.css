@@ -1,3 +1,20 @@
+.SportsPage .business-link, .politics-link, .entertainment-link, .technology-link, .science-link {
+   color: black;
+}
+
+.SportsPage .business-link:hover, .politics-link:hover, .entertainment-link:hover, .technology-link:hover, .science-link:hover {
+   text-decoration: underline;
+}
+
+.SportsPage .nav-categories {
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: 35px;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+   padding: 10px;
+}
+
 .SportsPage .page-title {
    text-align: center;
    margin: 30px auto;

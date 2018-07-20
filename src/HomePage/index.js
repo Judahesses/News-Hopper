@@ -10,22 +10,22 @@ class HomePage extends Component {
        <h1 className='app-title'>News-Hopper</h1>
         <div className="categories">
           <a href='/technology'className="tech">
-          <Link to="/technology" className="tech-link">Technology</Link>
+          <Link to="/technology" className="tech-link-home">Technology</Link>
           </a>
           <a href='/business' className="business">
-          <Link to="/business" className="business-link">Business</Link>
+          <Link to="/business" className="business-link-home">Business</Link>
           </a>
           <a href='/politics' className="politics">
-          <Link to="/politics" className="politics-link">Politics</Link>
+          <Link to="/politics" className="politics-link-home">Politics</Link>
           </a>
           <a href='/entertainment' className="entertainment">
-          <Link to="/entertainment" className="entertainment-link">Entertainment</Link>
+          <Link to="/entertainment" className="entertainment-link-home">Entertainment</Link>
           </a>
           <a href='/sports' className="sports">
-          <Link to="/sports" className="sports-link">Sports</Link>
+          <Link to="/sports" className="sports-link-home">Sports</Link>
           </a>
           <a href='/science' className="science">
-          <Link to="/science" className="science-link">Science</Link>
+          <Link to="/science" className="science-link-home">Science</Link>
           </a>
         </div> 
       </div> 

@@ -14,106 +14,46 @@
     margin: 9%;
 }
 
-.HomePage .tech {
+.HomePage .tech, .business, .politics, .entertainment, .sports, .science {
     border: 1px solid black;
     font-size: 40px;
     align-self: center;
     padding: 50px;
     transition: transform .2s;
+}
+
+.HomePage .tech:hover, .business:hover, .politics:hover, .entertainment:hover, .sports:hover, .science:hover {
+    transform: scale(1.05);
+}
+
+.HomePage .tech {
     background-image: url('https://s3.envato.com/files/242454786/Preview%20Image%201.jpg');
  }
 
- .HomePage .tech:hover {
-    transform: scale(1.05);
-}
-
-.HomePage .tech-link {
-    color: white;
-}
- 
 .HomePage .business {
-    border: 1px solid black;
-    font-size: 40px;
-    align-self: center;
-    padding: 50px;
-    transition: transform .2s;
     background-image: url('https://www.amrita.edu/sites/default/files/school-of-business-research.jpg');
- }
+}
 
- .HomePage .business:hover {
-    transform: scale(1.05);
-}
- 
-.HomePage .business-link {
-    color: black;
-}
- 
 .HomePage .politics {
-    border: 1px solid black;
-    font-size: 40px;
-    align-self: center;
-    padding: 50px;
-    transition: transform .2s;
     background-image: url('https://img.freepik.com/free-vector/concept-for-protest-revolution-conflict_1325-267.jpg?size=338&ext=jpg');
 }
 
-.HomePage .politics:hover {
-    transform: scale(1.05);
-}
- 
-.HomePage .politics-link {
-    color: white;
-}
- 
-.HomePage .sports {
-    border: 1px solid black;
-    font-size: 40px;
-    align-self: center;
-    padding: 50px;
-    transition: transform .2s;
-    background-image: url('http://www.championdigitaldesign.com/photos/coresportsbg2_home.jpg');
-}
-
-.HomePage .sports:hover {
-    transform: scale(1.05);
-}
- 
-.HomePage .sports-link {
-    color: white;
-}
- 
-.HomePage .science {
-    border: 1px solid black;
-    font-size: 40px;
-    align-self: center;
-    padding: 50px;
-    transition: transform .2s;
-    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/oA5povt/molecular-structure-science-background-group_rny4txfmg_thumbnail-full01.png');
-}
-
-.HomePage .science:hover {
-    transform: scale(1.05);
-}
-
-.HomePage .science-link {
-    color: black;
-}
-
 .HomePage .entertainment {
-    border: 1px solid black;
-    font-size: 40px;
-    align-self: center;
-    padding: 50px;
-    transition: transform .2s;
     background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/04/35/78/295849108e96940.jpg');
 }
 
-.HomePage .entertainment:hover {
-    transform: scale(1.05);
+.HomePage .sports {
+    background-image: url('http://www.championdigitaldesign.com/photos/coresportsbg2_home.jpg');
 }
- 
-.HomePage .entertainment-link {
+
+.HomePage .science {
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/oA5povt/molecular-structure-science-background-group_rny4txfmg_thumbnail-full01.png');
+}
+
+.HomePage .tech-link-home, .politics-link-home, .sports-link-home {
+    color: white;
+}
+
+.HomePage .business-link-home, .entertainment-link-home, .science-link-home {
     color: black;
-    text-decoration: none;
 }
- 

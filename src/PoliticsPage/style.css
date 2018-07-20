@@ -1,3 +1,20 @@
+.PoliticsPage .business-link, .science-link, .entertainment-link, .technology-link, .sports-link {
+   color: black;
+}
+
+.PoliticsPage .business-link:hover, .science-link:hover, .entertainment-link:hover, .technology-link:hover, .sports-link:hover {
+   text-decoration: underline;
+}
+
+.PoliticsPage .nav-categories {
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: 35px;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+   padding: 10px;
+}
+
 .PoliticsPage .page-title {
    text-align: center;
    margin: 30px auto;
