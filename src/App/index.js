@@ -9,6 +9,7 @@ import SportsPage from '../SportsPage';
 import SciencePage from '../SciencePage';
 import HomePage from "../HomePage";
 import CommentPage from "../CommentPage";
+import ArticlePage from "../ArticlePage";
 
 class App extends Component {
  render() {
@@ -23,6 +24,7 @@ class App extends Component {
         <Route path='/sports' component={SportsPage} />
         <Route path='/science' component={SciencePage} />
         <Route path='/technologycom' component={CommentPage} />
+        <Route path='/article' component={ArticlePage} />
       </div>
     </Router>
    );
