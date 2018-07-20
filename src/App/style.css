@@ -5,3 +5,66 @@
 a:-webkit-any-link {
     text-decoration: none;
  }
+
+ body {
+    background-color: #F8F8F8;
+ }
+ 
+ .page-title {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 40px;
+ }
+ 
+ .container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 4fr);
+    grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px;
+    margin: 0 30px;
+ }
+ 
+ .title {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+    margin-top: 5px;
+ }
+ 
+ .title:hover { 
+    text-decoration: underline;
+ }
+ 
+ .time {
+    font-size: 15px;
+    margin-top: -10px;
+    margin-left: 5px;
+    font-weight: lighter;
+ }
+ 
+ .business-news {
+    border: 1px solid gray;
+    box-shadow: 3px 3px 3px black;
+    padding-top: -60px;
+    
+ }
+ 
+ .img {
+    width: 140px;
+    height: 120px; 
+    float: left;
+    margin-left: 5px;
+ }
+ 
+ .description {
+    margin: -4px 10px 0px 10px;
+    font-weight: lighter;
+ }
+ 
+ .img-description {
+    display: flex;
+    align-self: flex-start;
+    margin-top: -15px;
+ }
+ 
