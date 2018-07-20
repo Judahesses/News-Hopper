@@ -23,7 +23,7 @@ class BusinessPage extends Component {
   render() {
     return (
       <div>
-        <h2 className='business-title'>Business</h2>
+        <h2 className='page-title'>Business</h2>
           <div className='container'> 
             {this.state.businessNews.map(article => 
              <div className='business-news'>
