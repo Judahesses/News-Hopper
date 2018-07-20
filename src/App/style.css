@@ -1,3 +1,7 @@
 .App .nav {
     text-align: center;
 }
+
+a:-webkit-any-link {
+    text-decoration: none;
+ }
