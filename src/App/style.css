@@ -64,7 +64,6 @@ a:-webkit-any-link {
  
  .img-description {
     display: flex;
-    justify-content: space-between;
     align-self: flex-start;
     margin-top: -15px;
  }
