@@ -27,12 +27,10 @@ class HomePage extends Component {
           <a href='/science' className="science">
           <Link to="/science" className="science-link">Science</Link>
           </a>
-        </div>  
-
-   );
- }
+        </div> 
+      </div> 
+    );
+  }
 }
 
 export default HomePage;
-
-
