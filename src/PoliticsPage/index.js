@@ -30,8 +30,8 @@ class PoliticsPage extends Component {
                 <a href={article.url} target="_blank"><h2 className='title'>{article.title}</h2></a>
                 <h4 className='time'>{article.publishedAt = moment(article.publishedAt).format('LL')}</h4>
                 <div className='img-description'>
-                  <a href={article.url} target="_blank"><img className='img' src={article.urlToImage} alt='' /></a>
-                  <h3 className='description'>{article.description}</h3>
+                  <a href={article.url} target="_blank"><img className='img' src={article.urlToImage || 'http://www.bsmc.net.au/wp-content/uploads/No-image-available.jpg'} /></a>
+                  <h3 className='description'>{article.description || 'No description.'}</h3>
                 </div>
               </div>
             )}
