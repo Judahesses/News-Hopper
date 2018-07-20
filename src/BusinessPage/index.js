@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
+import moment from 'moment'
 
 class BusinessPage extends Component {
   constructor(props) {
@@ -21,10 +22,20 @@ class BusinessPage extends Component {
   }
   render() {
     return (
-      <div> 
-        {this.state.businessNews.map(article => 
-         <h1>{article.title} <a href={article.url} target="_blank">{article.url}</a></h1>   
-      )}
+      <div>
+        <h2 className='business-title'>Business</h2>
+          <div className='container'> 
+            {this.state.businessNews.map(article => 
+             <div className='business-news'>
+                <a href={article.url} target="_blank"><h2 className='title'>{article.title}</h2></a>
+                <h4 className='time'>{article.publishedAt = moment(article.publishedAt).format('LL')}</h4>
+                <div className='img-description'>
+                  <a href={article.url} target="_blank"><img className='img' src={article.urlToImage} alt='' /></a>
+                  <h3 className='description'>{article.description}</h3>
+                </div>
+              </div>
+            )}
+          </div>
       </div>
     )
   }
