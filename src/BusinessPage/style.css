@@ -1,0 +1,57 @@
+.BusinessPage  .page-title {
+   text-align: center;
+   margin: 30px auto;
+   font-size: 40px;
+}
+
+.BusinessPage  .container {
+   display: grid;
+   grid-gap: 10px;
+   grid-template-columns: repeat(2, 4fr);
+   grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px;
+   margin: 0 30px;
+}
+
+.BusinessPage  .title {
+   font-size: 20px;
+   text-decoration: none;
+   color: black;
+   margin-left: 5px;
+   margin-top: 5px;
+}
+
+.BusinessPage  .title:hover { 
+   text-decoration: underline;
+}
+
+.BusinessPage  .time {
+   font-size: 15px;
+   margin-top: -10px;
+   margin-left: 5px;
+   font-weight: lighter;
+}
+
+.BusinessPage .business-news {
+   border: 1px solid gray;
+   box-shadow: 3px 3px 3px black;
+   padding-top: -60px;
+   
+}
+
+.BusinessPage  .img {
+   width: 140px;
+   height: 120px; 
+   float: left;
+   margin-left: 5px;
+}
+
+.BusinessPage  .description {
+   margin: -4px 10px 0px 10px;
+   font-weight: lighter;
+}
+
+.BusinessPage  .img-description {
+   display: flex;
+   align-self: flex-start;
+   margin-top: -15px;
+}

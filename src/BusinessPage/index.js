@@ -22,7 +22,7 @@ class BusinessPage extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='BusinessPage'>
         <h2 className='page-title'>Business</h2>
           <div className='container'> 
             {this.state.businessNews.map(article => 

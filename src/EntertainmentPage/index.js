@@ -22,11 +22,11 @@ class EntertainmentPage extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='EntertainmentPage'>
         <h2 className='page-title'>Entertainment</h2>
           <div className='container'> 
             {this.state.entertainmentNews.map(article => 
-             <div className='business-news'>
+             <div className='entertainment-news'>
                 <a href={article.url} target="_blank"><h2 className='title'>{article.title}</h2></a>
                 <h4 className='time'>{article.publishedAt = moment(article.publishedAt).format('LL')}</h4>
                 <div className='img-description'>

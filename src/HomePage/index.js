@@ -6,7 +6,7 @@ class HomePage extends Component {
 
  render() {
    return(
-     <div>
+     <div className='HomePage'>
        <h1 className='app-title'>News-Hopper</h1>
         <div className="categories">
           <a href='/technology'className="tech">
