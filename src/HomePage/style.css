@@ -1,54 +1,128 @@
-.tech, .business, .politics, .sports, .culture {
-    border-style: solid;
-    border-color: white;
-    background-color: white;
+body {
+    background-color: #f0f0f0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: -50px;
+    margin-top: 50px;
+}
+
+.categories {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(3, 9fr);
+    grid-template-rows: 150px 150px 150px;
+    text-align: center;
+    align-content: center;
+    margin: 9%;
+}
+
+.tech {
+    border: 1px solid black;
+    font-size: 40px;
+    align-self: center;
+    padding: 50px;
+    transition: transform .2s;
+    background-image: url('https://s3.envato.com/files/242454786/Preview%20Image%201.jpg')
  }
+
+.tech:hover {
+    transform: scale(1.05);
+}
+
+.tech-link {
+    color: white;
+    text-decoration: none;
+}
  
- .tech {
-    width: 900px;
-    margin-left: 20px;
-    height: 200px;
-    margin-bottom: 20px;
+.business {
+    border: 1px solid black;
+    font-size: 40px;
+    align-self: center;
+    padding: 50px;
+    transition: transform .2s;
+    background-image: url('https://www.amrita.edu/sites/default/files/school-of-business-research.jpg')
  }
+
+.business:hover {
+    transform: scale(1.05);
+}
  
- .business {
-    width: 425px;
-    margin-left: 20px;
-    height: 450px;
-    margin-bottom: 20px;
-    display: flex;
-    float: left;
- }
+.business-link {
+    color: black;
+    text-decoration: none;
+}
  
- .politics {
-    width: 425px;
-    margin-left: 20px;
-    height: 150px;
-    margin-bottom: 20px;
-    display: flex;
-    float: left;
- }
+.politics {
+    border: 1px solid black;
+    font-size: 40px;
+    align-self: center;
+    padding: 50px;
+    transition: transform .2s;
+    background-image: url('https://img.freepik.com/free-vector/concept-for-protest-revolution-conflict_1325-267.jpg?size=338&ext=jpg')
+}
+
+.politics:hover {
+    transform: scale(1.05);
+}
  
- .culture {
-    width: 425px;
-    margin-left: 20px;
-    height: 150px;
-    margin-bottom: 20px;
-    display: flex;
-    float: left;
-    height: 273px;
- }
+.politics-link {
+    color: white;
+    text-decoration: none;
+}
  
- .sports {
-    width: 425px;
-    margin-right: 30px;
-    height: 150px;
-    margin-bottom: 20px;
-    display: flex;
-    float: right;
-    margin-top: 20px;
-    z-index: -1;
- }
+.sports {
+    border: 1px solid black;
+    font-size: 40px;
+    align-self: center;
+    padding: 50px;
+    transition: transform .2s;
+    background-image: url('http://www.championdigitaldesign.com/photos/coresportsbg2_home.jpg')
+}
+
+.sports:hover {
+    transform: scale(1.05);
+}
  
+.sports-link {
+    color: white;
+    text-decoration: none;
+}
  
+.science {
+    border: 1px solid black;
+    font-size: 40px;
+    align-self: center;
+    padding: 50px;
+    transition: transform .2s;
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/oA5povt/molecular-structure-science-background-group_rny4txfmg_thumbnail-full01.png')
+}
+
+.science:hover {
+    transform: scale(1.05);
+}
+
+.science-link {
+    color: black;
+    text-decoration: none;
+}
+
+.entertainment {
+    border: 1px solid black;
+    font-size: 40px;
+    align-self: center;
+    padding: 50px;
+    transition: transform .2s;
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/04/35/78/295849108e96940.jpg')
+}
+
+.entertainment:hover {
+    transform: scale(1.05);
+}
+ 
+.entertainment-link {
+    color: black;
+    text-decoration: none;
+}
  
