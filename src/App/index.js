@@ -9,10 +9,11 @@ import SportsPage from '../SportsPage';
 import SciencePage from '../SciencePage';
 import HomePage from "../HomePage";
 import CommentPage from "../CommentPage";
+import SinglePage from "../SinglePage";
 
 class App extends Component {
  render() {
-   return( 
+   return(
     <Router>
       <div className="App">
         <Route exact path='/' component={HomePage} />
@@ -23,6 +24,7 @@ class App extends Component {
         <Route path='/sports' component={SportsPage} />
         <Route path='/science' component={SciencePage} />
         <Route path='/technologycom' component={CommentPage} />
+        <Route path='/article/:title' component={SinglePage} />
       </div>
     </Router>
    );

@@ -35,10 +35,10 @@ class TechnologyPage extends Component {
             </nav>
         </nav>
           <h2 className='page-title'>Technology</h2>
-            <div className='container'> 
-              {this.state.technologyNews.map(article => 
+            <div className='container'>
+              {this.state.technologyNews.map(article =>
               <div className='technology-news'>
-                  <a href={article.url} target="_blank"><h2 className='title'>{article.title}</h2></a>
+                  <h2 className='title'><Link to={`/article/${article.title}`}>{article.title}</Link></h2>
                   <h4 className='time'>{article.publishedAt = moment(article.publishedAt).format('LL')}</h4>
                   <div className='img-description'>
                     <a href={article.url} target="_blank"><img className='img' src={article.urlToImage || 'http://www.bsmc.net.au/wp-content/uploads/No-image-available.jpg'} /></a>
