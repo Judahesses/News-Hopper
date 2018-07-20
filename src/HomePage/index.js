@@ -28,7 +28,7 @@ class HomePage extends Component {
           <Link to="/science" className="science-link">Science</Link>
           </a>
         </div>  
-      </div>
+
    );
  }
 }
