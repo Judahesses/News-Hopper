@@ -59,7 +59,7 @@ class TechnologyPage extends Component {
                   <h4 className='time'>{article.publishedAt = moment(article.publishedAt).format('LL')}</h4>
                   <div className='img-description'>
                     <a href={article.url} target="_blank"><img className='img' src={article.urlToImage || 'http://www.bsmc.net.au/wp-content/uploads/No-image-available.jpg'} /></a>
-                    <h3 className='description'>{article.description || 'No description.'}</h3>
+                    <h3 className='description'>{article.description || 'Sorry, no description available.'}</h3>
                   </div>
                 </div>
                 );

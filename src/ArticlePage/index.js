@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./style.css";
-import moment from 'moment';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import moment from 'moment';
 
-class BusinessPage extends Component {
-  constructor(props) {
+class ArticlePage extends Component {
+    constructor(props) {
     super(props);
 
     this.state = {
@@ -21,21 +21,13 @@ class BusinessPage extends Component {
     })
   })
   }
-  render() {
-    return (
-      <div className='BusinessPage'>
-      <nav className='nav'>
-          <p><Link className='home' to='/'>Home</Link></p>
-            <nav className='nav-categories'>
-              <Link to="/technology" className="technology-link">Technology</Link>
-              <Link to="/politics" className="politics-link">Politics</Link>
-              <Link to="/entertainment" className="entertainment-link">Entertainment</Link>
-              <Link to="/sports" className="sports-link">Sports</Link>
-              <Link to="/science" className="science-link">Science</Link>
-            </nav>
-        </nav>
-        <h2 className='page-title'>Business</h2>
-          <div className='container'> 
+    render() {
+      return( 
+        <div className="SingleArticle">
+            <div>
+               <h1>Test</h1> 
+            </div>
+            <div className='container'> 
             {this.state.businessNews.map(article => 
              <div className='business-news'>
                 <a href={article.url} target="_blank"><h2 className='title'>{article.title}</h2></a>
@@ -47,9 +39,9 @@ class BusinessPage extends Component {
               </div>
             )}
           </div>
-      </div>
-    )
-  }
+        </div>
+        );
+    }
 }
 
-export default BusinessPage;
+export default ArticlePage;
