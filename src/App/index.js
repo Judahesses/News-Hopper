@@ -10,7 +10,8 @@ import SciencePage from '../SciencePage';
 import HomePage from "../HomePage";
 import CommentPage from "../CommentPage";
 import SinglePage from "../SinglePage";
-
+import ArticlePage from "../ArticlePage";
+import BookmarkPage from "../BookmarkPage";
 
 class App extends Component {
   constructor (props) {
