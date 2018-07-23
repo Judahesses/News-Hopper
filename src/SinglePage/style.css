@@ -26,10 +26,11 @@
   text-decoration: underline;
 }
 
-.SinglePage .business-news {
+.SinglePage .single-news {
    border: 1px solid gray;
    box-shadow: 3px 3px 3px black;
    padding-top: -60px;
+   margin: 0 30px;
 }
 
 .SinglePage .article-author {
