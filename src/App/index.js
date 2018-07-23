@@ -9,6 +9,7 @@ import SportsPage from '../SportsPage';
 import SciencePage from '../SciencePage';
 import HomePage from "../HomePage";
 import CommentPage from "../CommentPage";
+import SinglePage from "../SinglePage";
 
 
 class App extends Component {
@@ -30,11 +31,11 @@ class App extends Component {
       <div className="App">
         <Route exact path='/' component={HomePage} />
         <Route path='/technology' render={(props) => <TechnologyPage articleOnClick={this.articleOnClick} /> } />
-        <Route path='/business' component={BusinessPage} />
-        <Route path='/politics' component={PoliticsPage} />
-        <Route path='/entertainment' component={EntertainmentPage} />
-        <Route path='/sports' component={SportsPage} />
-        <Route path='/science' component={SciencePage} />
+         <Route path='/business' render={(props) => <BusinessPage articleOnClick={this.articleOnClick} />} />
+         <Route path='/politics' render={(props) => <PoliticsPage articleOnClick={this.articleOnClick} />} />
+         <Route path='/entertainment' render={(props) => <EntertainmentPage articleOnClick={this.articleOnClick} />} />
+         <Route path='/sports' render={(props) => <SportsPage articleOnClick={this.articleOnClick} />} />
+         <Route path='/science' render={(props) => <SciencePage articleOnClick={this.articleOnClick} />} />
         <Route path='/technologycom' component={CommentPage} />
         <Route path='/article' render={(props) => <SinglePage  currentArticle={this.state.currentArticle}/> } />
       </div>
