@@ -19,9 +19,9 @@ class BookmarkPage extends Component {
       }
    }
    componentDidMount(){
-      let id = this.props.match.params.id;
+      let title = this.props.title
       console.log(this.props);
-      fetch(`/video-games/${id}.json`)
+      fetch(`https://newsapi.org/v2/top-headlines?country=us&title=${title}&apiKey=a78e0b2dba4b489eb46d9605ed082d65`)
       .then(response => response.json())
       .then(article => {
          this.setState({
