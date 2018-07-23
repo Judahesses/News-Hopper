@@ -53,10 +53,7 @@ class SinglePage extends Component {
               <h4 className='time'>{this.props.currentArticle.publishedAt = moment(this.props.currentArticle.publishedAt).format('LL')}</h4>
             </div>
           <div>
-            <div className="comment-head">
-              <h1>Write your Comment.</h1>
-            </div>
-            <div className="form">
+            <div className="form-container">
               <form action="/article">
                 Comment: <input type="text" comment="comment">
                 </input>
