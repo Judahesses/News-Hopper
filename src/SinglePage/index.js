@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "./style.css";
+import "./style.css";
 import moment from 'moment'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -59,7 +59,7 @@ class SinglePage extends Component {
               <h1>Write your Comment.</h1>
             </div>
             <div className="form">
-              <form action="/technologycom">
+              <form action="/article">
                 Comment: <input type="text" comment="comment">
                 </input>
                 <input type="submit">
