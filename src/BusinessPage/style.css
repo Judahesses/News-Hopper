@@ -25,7 +25,7 @@
    display: grid;
    grid-gap: 10px;
    grid-template-columns: repeat(2, 4fr);
-   grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px;
+   grid-template-rows: 220px 220px 220px 220px 220px 220px 220px 220px 220px;
    margin: 0 30px;
 }
 
@@ -53,7 +53,6 @@
    border: 1px solid gray;
    box-shadow: 3px 3px 3px black;
    padding-top: -60px;
-   
 }
 
 .BusinessPage  .img {
