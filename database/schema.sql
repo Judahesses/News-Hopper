@@ -6,9 +6,13 @@ CREATE DATABASE newshopper;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS comments;
 
-CREATE TABLE users (
+CREATE TABLE articles (
     id SERIAL PRIMARY KEY NOT NULL,
-    name TEXT
+    title TEXT,
+    image_url TEXT,
+    date TEXT,
+    blurb TEXT,
+    url TEXT,
 )
 
 CREATE TABLE comments (
