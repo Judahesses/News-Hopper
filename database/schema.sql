@@ -9,16 +9,17 @@ DROP TABLE IF EXISTS comments;
 CREATE TABLE articles (
     id SERIAL PRIMARY KEY NOT NULL,
     title TEXT,
-    image_url TEXT,
-    date TEXT,
-    blurb TEXT,
+    urlToImage TEXT,
+    author TEXT,
+    publishedAt TEXT,
+    description TEXT,
     url TEXT,
 )
 
 CREATE TABLE comments (
    id SERIAL PRIMARY KEY NOT NULL,
-   user_id INTEGER REFERENCES users(id),
-   content TEXT,
-   article_url TEXT,
+   article_id INTEGER REFERENCES articles(id),
+   author TEXT,
+   body TEXT,
    created_at TIMESTAMP
 )
