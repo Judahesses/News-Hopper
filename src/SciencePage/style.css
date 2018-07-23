@@ -39,6 +39,7 @@
 
 .SciencePage .title:hover { 
    text-decoration: underline;
+   cursor: pointer;
 }
 
 .SciencePage .time {

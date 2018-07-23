@@ -39,6 +39,7 @@
 
 .TechnologyPage .title:hover { 
    text-decoration: underline;
+   cursor: pointer;
 }
 
 .TechnologyPage .time {

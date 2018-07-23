@@ -39,6 +39,7 @@
 
 .SportsPage .title:hover { 
    text-decoration: underline;
+   cursor: pointer;
 }
 
 .SportsPage .time {

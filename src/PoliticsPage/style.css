@@ -39,6 +39,7 @@
 
 .PoliticsPage .title:hover { 
    text-decoration: underline;
+   cursor: pointer;
 }
 
 .PoliticsPage .time {

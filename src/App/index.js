@@ -9,7 +9,6 @@ import SportsPage from '../SportsPage';
 import SciencePage from '../SciencePage';
 import HomePage from "../HomePage";
 import SinglePage from "../SinglePage";
-import ArticlePage from "../ArticlePage";
 import BookmarkPage from "../BookmarkPage";
 
 class App extends Component {
