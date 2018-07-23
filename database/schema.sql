@@ -3,7 +3,7 @@ CREATE DATABASE newshopper;
 
 \c newshopper
 
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS articles;
 DROP TABLE IF EXISTS comments;
 
 CREATE TABLE articles (
@@ -13,8 +13,8 @@ CREATE TABLE articles (
     author TEXT,
     publishedAt TEXT,
     description TEXT,
-    url TEXT,
-)
+    url TEXT
+);
 
 CREATE TABLE comments (
    id SERIAL PRIMARY KEY NOT NULL,
