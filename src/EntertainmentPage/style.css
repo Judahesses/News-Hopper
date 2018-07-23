@@ -37,8 +37,9 @@
    margin-top: 5px;
 }
 
-.EntertainmentPage .title:hover { 
+.EntertainmentPage .title:hover {
    text-decoration: underline;
+   cursor: pointer
 }
 
 .EntertainmentPage .time {
@@ -52,12 +53,12 @@
    border: 1px solid gray;
    box-shadow: 3px 3px 3px black;
    padding-top: -60px;
-   
+
 }
 
 .EntertainmentPage .img {
    width: 140px;
-   height: 120px; 
+   height: 120px;
    float: left;
    margin-left: 5px;
 }
