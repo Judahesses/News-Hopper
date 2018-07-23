@@ -8,8 +8,9 @@ import EntertainmentPage from '../EntertainmentPage';
 import SportsPage from '../SportsPage';
 import SciencePage from '../SciencePage';
 import HomePage from "../HomePage";
-import SinglePage from "../SinglePage";
 import BookmarkPage from "../BookmarkPage";
+import SinglePage from "../SinglePage";
+
 
 class App extends Component {
   constructor (props) {
@@ -36,6 +37,7 @@ class App extends Component {
          <Route path='/sports' render={(props) => <SportsPage articleOnClick={this.articleOnClick} />} />
          <Route path='/science' render={(props) => <SciencePage articleOnClick={this.articleOnClick} />} />
         <Route path='/article' render={(props) => <SinglePage  currentArticle={this.state.currentArticle}/> } />
+        <Route path='/bookmarks' render={(props) => <BookmarkPage/> } />
       </div>
     </Router>
    );
