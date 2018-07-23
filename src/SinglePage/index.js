@@ -44,7 +44,7 @@ class SinglePage extends Component {
             </nav>
           </nav>
           <a href={this.props.currentArticle.url} target="_blank"><h2 className='page-title'>{this.props.currentArticle.title}</h2></a>
-            <div className='business-news'>
+            <div className='single-news'>
               <div className='img-description'>
                 <a href={this.props.currentArticle.url} target="_blank"><img className='img' src={this.props.currentArticle.urlToImage || 'http://www.bsmc.net.au/wp-content/uploads/No-image-available.jpg'} /></a>
                 <h3 className='description'>{this.props.currentArticle.description || 'No description.'}</h3>
