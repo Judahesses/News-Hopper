@@ -49,7 +49,7 @@ class SinglePage extends Component {
                 <a href={this.props.currentArticle.url} target="_blank"><img className='img' src={this.props.currentArticle.urlToImage || 'http://www.bsmc.net.au/wp-content/uploads/No-image-available.jpg'} /></a>
                 <h3 className='description'>{this.props.currentArticle.description || 'No description.'}</h3>
               </div>
-              <h2 className='title'>By {this.props.currentArticle.author}</h2>
+              <h2 className='article-author'>By {this.props.currentArticle.author}</h2>
               <h4 className='time'>{this.props.currentArticle.publishedAt = moment(this.props.currentArticle.publishedAt).format('LL')}</h4>
             </div>
           <div>
