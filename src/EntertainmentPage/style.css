@@ -39,6 +39,7 @@
 
 .EntertainmentPage .title:hover { 
    text-decoration: underline;
+   cursor: pointer;
 }
 
 .EntertainmentPage .time {
