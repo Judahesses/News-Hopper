@@ -8,7 +8,6 @@ import EntertainmentPage from '../EntertainmentPage';
 import SportsPage from '../SportsPage';
 import SciencePage from '../SciencePage';
 import HomePage from "../HomePage";
-import CommentPage from "../CommentPage";
 import SinglePage from "../SinglePage";
 import ArticlePage from "../ArticlePage";
 import BookmarkPage from "../BookmarkPage";
@@ -37,7 +36,6 @@ class App extends Component {
          <Route path='/entertainment' render={(props) => <EntertainmentPage articleOnClick={this.articleOnClick} />} />
          <Route path='/sports' render={(props) => <SportsPage articleOnClick={this.articleOnClick} />} />
          <Route path='/science' render={(props) => <SciencePage articleOnClick={this.articleOnClick} />} />
-        <Route path='/technologycom' component={CommentPage} />
         <Route path='/article' render={(props) => <SinglePage  currentArticle={this.state.currentArticle}/> } />
       </div>
     </Router>

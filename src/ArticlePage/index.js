@@ -1,26 +1,26 @@
 import React, { Component } from "react";
-import "./style.css";
+// import "./style.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import moment from 'moment';
 
 class ArticlePage extends Component {
     constructor(props) {
-    super(props);
-
-    this.state = {
-      businessNews: []
-    }
-  }
-  componentDidMount(){
-    fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a78e0b2dba4b489eb46d9605ed082d65')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data.articles)
-      this.setState({
-        businessNews: data.articles
-    })
-  })
-  }
+        super(props);
+    
+        this.state = {
+          businessNews: []
+        }
+      }
+      componentDidMount(){
+        fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a78e0b2dba4b489eb46d9605ed082d65')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data.articles)
+          this.setState({
+            businessNews: data.articles
+        })
+      })
+      }
     render() {
       return( 
         <div className="SingleArticle">
@@ -35,6 +35,7 @@ class ArticlePage extends Component {
                 <div className='img-description'>
                   <a href={article.url} target="_blank"><img className='img' src={article.urlToImage || 'http://www.bsmc.net.au/wp-content/uploads/No-image-available.jpg'} /></a>
                   <h3 className='description'>{article.description || 'Sorry, no description available.'}</h3>
+                
                 </div>
               </div>
             )}
