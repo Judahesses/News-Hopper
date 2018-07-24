@@ -48,6 +48,26 @@ app.post('/posts', (request, response) => {
   });
 });
 
+app.put('/posts/:id.json', (request, response) => {
+  const newPost = {
+    author: request.body.author,
+    stars: request.body.stars,
+    title: request.body.title,
+    body: request.body.body
+  };
+  Post.edit(newPost).then(post => {
+    response.json(post);
+  });
+})
+
+app.get('/posts/:id.json', (request, response) => {
+  let id = request.params.id;
+  Post.findById(id)
+  .then(post => {
+    response.json(post);
+  });
+})
+
 // app.get('/posts/:id', (request, response) => {
 //   const id = Number(request.params.id)
 //   Promise.all([

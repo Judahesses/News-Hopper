@@ -22,6 +22,7 @@ class App extends Component {
          <Route path='/science' component={CategoryPage} />
          <Route path='/feedback' component={FeedbackPage} />
          <Route path='/create-post' component={CreatePost} />
+         <Route path='/edit-post/:id' component={EditPost}/>
          <Footer />
       </div>
     </Router>
