@@ -36,14 +36,14 @@ app.get('/reviews.json', (request, response) => {
 //     })
 // })
 
-// app.post('/posts', (request, response) => {
-//   const newPost = request.body
-//   newPost.created_at = new Date()
-//   Post.create(newPost)
-//     .then(post => {
-//       response.redirect(302, '/')
-//     })
-// })
+app.post('/posts', (request, response) => {
+  const newPost = request.body
+  newPost.created_at = new Date()
+  Post.create(newPost)
+    .then(post => {
+      response.redirect(302, '/')
+    })
+})
 
 // app.get('/posts/:id', (request, response) => {
 //   const id = Number(request.params.id)
@@ -110,6 +110,24 @@ app.get('/reviews.json', (request, response) => {
 //       }
 //     })
 // })
+
+app.post('/create-post', (request, response) => {
+  const newPost = {
+    stars: request.body.stars,
+    title: request.body.title,
+    body: request.body.body,
+    author: request.body.author
+  }
+})
+
+app.update('edit-post', (request, response) => {
+  const newPost = {
+    stars: request.body.stars,
+    title: request.body.title,
+    body: request.body.body,
+    author: request.body.author
+  }
+})
 
 app.listen(PORT, () => {
   console.log(`Express web server listening on port ${PORT}`);

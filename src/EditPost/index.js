@@ -20,8 +20,9 @@ class EditPost extends Component {
                         <form>
                             Your Feedback:
                             <input type="text" name="feedback-edit"/>
-                            <input type="submit-edit" name="Submit" action="/feedback"/>
-                        </form>
+                            {/* <input type="submit-edit" name="Submit"/> */}
+                            <button type="submit" action='/feedback'>Submit feedback</button>
+                            </form>
                     </div>
                 </div>
             </div>
