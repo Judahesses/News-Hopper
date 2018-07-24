@@ -12,26 +12,20 @@ class FeedbackPage extends Component {
     super(props);
 
     this.state = {
-      id: 0,
-      topic_id: "",
-      stars: "",
-      author: "",
-      created_at: "",
-      title: "",
-      body: ""
-    }
+      reviews: []
+    };
   }
 
-  // componentDidMount() {
-  //   fetch(`/posts.json`) 
-  //   .then(response => response.json())
-  //   .then(posts => {
-  //     console.log(feedback)
-  //     this.setState({
-  //       posts: posts
-  //     })
-  //   })
-  // }
+  componentDidMount() {
+    fetch('/reviews.json')
+      .then(response => response.json())
+      .then(reviews => {
+        console.log(reviews)
+        this.setState({
+          reviews: reviews.posts
+      });
+    });
+  }
 
   render() {
     console.log(this.state)
@@ -47,16 +41,22 @@ class FeedbackPage extends Component {
             </nav>
 
           <div className="post-feedback">
-            <p>{this.props.author}</p>
-            <p>{this.props.title}</p>
-            <p>{this.props.body}</p>
-            <p>{this.props.created_at}</p>
-           <p>{this.props.stars}</p>
-          </div>
+          {this.state.reviews.map(review => {
+            return (
+            <div>
+            <p>{review.stars}</p>
+            <p>{review.author}</p>
+            <p>{review.created_at}</p>
+            <p>{review.title}</p>
+            <p>{review.body}</p>
+            </div>
+            )
+         })}
         </div>
-    );
+      </div>
+      );
+    }
   }
-}
 
 
 export default FeedbackPage;
