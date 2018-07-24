@@ -3,9 +3,8 @@
 DELETE FROM topics;
 DELETE FROM posts; 
 
-INSERT INTO topics (name) VALUES ('Feedback');
+INSERT INTO topics (name) VALUES ('Review');
 INSERT INTO topics (name) VALUES ('Suggestion');
-INSERT INTO topics (name) VALUES ('Other');
 
 INSERT INTO posts
 (stars, author, created_at, title, body)
