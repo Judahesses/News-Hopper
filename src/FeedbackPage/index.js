@@ -35,15 +35,10 @@ class FeedbackPage extends Component {
   
 
   render() {
-
-    if (this.state.deleted === true) {
-      return <Redirect to="/" />
-    }
-
     return (
         <div className="Post">
           <div className="post-feedback">
-            <p>{this.author}</p>
+            <p>{this.props.author}</p>
             <p>{this.props.body}</p>
             <p>{this.props.created_at}</p>
             <p>{this.props.stars}</p>
