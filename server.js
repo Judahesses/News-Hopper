@@ -114,24 +114,6 @@ app.post('/posts', (request, response) => {
 //     })
 // })
 
-app.post('/create-post', (request, response) => {
-  const newPost = {
-    stars: request.body.stars,
-    title: request.body.title,
-    body: request.body.body,
-    author: request.body.author
-  }
-})
-
-app.update('edit-post', (request, response) => {
-  const newPost = {
-    stars: request.body.stars,
-    title: request.body.title,
-    body: request.body.body,
-    author: request.body.author
-  }
-})
-
 app.listen(PORT, () => {
   console.log(`Express web server listening on port ${PORT}`);
 });
