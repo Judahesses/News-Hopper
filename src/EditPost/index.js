@@ -3,10 +3,10 @@ import "./style.css";
 import moment from 'moment';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
-class CreatePost extends Component {
+class EditPost extends Component {
     render() {
         return(
-            <div className='CreatePost'>
+            <div className='EditPost'>
                 <nav className='nav'>
                     <p><Link className='home' to='/'>Home</Link></p>
                     <nav className='nav-categories'>
@@ -15,12 +15,12 @@ class CreatePost extends Component {
                     </nav>
                 </nav>
 
-                <div className="create-post-form">
+                <div className="edit-post-form">
                     <div className="form">
                         <form>
                             Your Feedback:
-                            <input type="text" name="feedback"/>
-                            <input type="submit" name="Submit" action="/feedback"/>
+                            <input type="text" name="feedback-edit"/>
+                            <input type="submit-edit" name="Submit" action="/feedback"/>
                         </form>
                     </div>
                 </div>
@@ -29,4 +29,4 @@ class CreatePost extends Component {
     }
 }
 
-export default CreatePost;          
+export default EditPost;          

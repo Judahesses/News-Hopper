@@ -6,6 +6,7 @@ import FeedbackPage from '../FeedbackPage';
 import Footer from '../Footer';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import CreatePost from "../CreatePost";
+import EditPost from "../EditPost";
 
 class App extends Component {
  render() {
