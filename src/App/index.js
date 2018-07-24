@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./style.css";
 import HomePage from "../HomePage";
-import CategoryPage from '../CategoryPage'
-import FeedbackPage from '../FeedbackPage'
+import CategoryPage from '../CategoryPage';
+import FeedbackPage from '../FeedbackPage';
+import Footer from '../Footer';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
          <Route path='/sports' component={CategoryPage} />
          <Route path='/science' component={CategoryPage} />
          <Route path='/feedback' component={FeedbackPage} />
+         <Footer />
       </div>
     </Router>
    );

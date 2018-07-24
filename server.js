@@ -9,8 +9,6 @@ const Topic = require('./models/topic')
 const jsonParser = bodyParser.json();
 app.use(jsonParser);
 
-
-
 app.get('/', (request, response) => {
   Promise.all([
     Post.all()
