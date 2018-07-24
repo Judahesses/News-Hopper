@@ -28,7 +28,16 @@ class FeedbackPage extends Component {
 
   render() {
     return (
-        <div className="Post">
+          <div className='FeedbackPage'>
+            <nav className='nav'>
+              <p><Link className='home' to='/'>Home</Link></p>
+              <nav className='nav-categories'>
+                <Link to="/reviews" className="reviews-link">Reviews</Link>
+                <Link to="/create-post" className="create-post-link">Create a Post!</Link>
+                <Link to="/suggesstions" className="suggestions-link">Suggestions</Link>
+              </nav>
+            </nav>
+
           <div className="post-feedback">
           {this.state.reviews.map(review => {
             return (

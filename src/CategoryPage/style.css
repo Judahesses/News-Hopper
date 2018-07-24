@@ -17,6 +17,7 @@
    text-align: center;
    margin: 30px auto;
    font-size: 40px;
+   text-decoration: underline;
 }
 .CategoryPage .container {
    display: grid;

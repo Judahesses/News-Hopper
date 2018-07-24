@@ -1,0 +1,15 @@
+.CreatePost .reviews-link, .suggestions-link {
+    color: black;
+ }
+ 
+ .CreatePost  .reviews-link:hover, .suggestions-link:hover {
+    text-decoration: underline;
+ }
+ .CreatePost .nav-categories {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 35px 30px 0px 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+ }
