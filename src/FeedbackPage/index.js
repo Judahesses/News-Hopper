@@ -11,47 +11,41 @@ class FeedbackPage extends Component {
     super(props);
 
     this.state = {
-      id: 0,
-      topic_id: "",
-      stars: 0,
-      author: "",
-      created_at: "",
-      title: "",
-      body: "",
-    }
+      reviews: []
+    };
   }
 
   componentDidMount() {
-    let id = this.props.id;
-    console.log(id)
-    fetch(`/posts/${id}.json`)
-    //.then(response => response.json())
-    // .then(feedback => {
-    //   console.log(feedback)
-    //   this.setState(feedback)
-    // })
+    fetch('/reviews.json')
+      .then(response => response.json())
+      .then(reviews => {
+        console.log(reviews)
+        this.setState({
+          reviews: reviews.posts
+      });
+    });
   }
 
-  
-
   render() {
-
-    if (this.state.deleted === true) {
-      return <Redirect to="/" />
-    }
-
     return (
         <div className="Post">
           <div className="post-feedback">
-            <p>{this.author}</p>
-            <p>{this.props.body}</p>
-            <p>{this.props.created_at}</p>
-            <p>{this.props.stars}</p>
-          </div>
+          {this.state.reviews.map(review => {
+            return (
+            <div>
+            <p>{review.stars}</p>
+            <p>{review.author}</p>
+            <p>{review.created_at}</p>
+            <p>{review.title}</p>
+            <p>{review.body}</p>
+            </div>
+            )
+         })}
         </div>
-    );
+      </div>
+      );
+    }
   }
-}
 
 
 export default FeedbackPage;
