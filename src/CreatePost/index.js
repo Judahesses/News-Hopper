@@ -72,6 +72,7 @@ class CreatePost extends Component {
 
                 <div className="create-post-form">
                     <div className="form">
+
                         <form onChange={this.onFormChange} onSubmit={this.onFormSubmit} >
                             {/* <div>
                             <label htmlFor="feedback">Feedback: </label>
@@ -128,6 +129,12 @@ class CreatePost extends Component {
                     value="Add Post"
                     />
                 </div>
+
+
+                        <form>
+                            Your Feedback:
+                            <input type="text" name="feedback"/>
+                            <input type="submit" name="Submit" action="/feedback"/>
 
                         </form>
                     </div>
