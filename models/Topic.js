@@ -1,5 +1,17 @@
-const db = require('../database/connection');
+const db = require('../db/connection')
 
-const Topic = {};
+const Topic = {}
 
-module.exports = Topic;
+Topic.all = () => {
+  return db.any(
+    "SELECT * FROM topics"
+  )
+}
+
+Topic.findById = id => {
+  return db.one("SELECT * FROM topics WHERE id = ${id}",
+    { id: id }
+  )
+}
+
+module.exports = Topic
