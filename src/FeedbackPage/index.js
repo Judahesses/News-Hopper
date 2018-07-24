@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import moment from 'moment';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import CreatePost from '../CreatePost';
 
 
 //adapted from building example
@@ -13,28 +14,27 @@ class FeedbackPage extends Component {
     this.state = {
       id: 0,
       topic_id: "",
-      stars: 0,
+      stars: "",
       author: "",
       created_at: "",
       title: "",
-      body: "",
+      body: ""
     }
   }
 
-  componentDidMount() {
-    let id = this.props.id;
-    console.log(id)
-    fetch(`/posts/${id}.json`)
-    //.then(response => response.json())
-    // .then(feedback => {
-    //   console.log(feedback)
-    //   this.setState(feedback)
-    // })
-  }
-
-  
+  // componentDidMount() {
+  //   fetch(`/posts.json`) 
+  //   .then(response => response.json())
+  //   .then(posts => {
+  //     console.log(feedback)
+  //     this.setState({
+  //       posts: posts
+  //     })
+  //   })
+  // }
 
   render() {
+    console.log(this.state)
     return (
           <div className='FeedbackPage'>
             <nav className='nav'>
@@ -42,15 +42,16 @@ class FeedbackPage extends Component {
               <nav className='nav-categories'>
                 <Link to="/reviews" className="reviews-link">Reviews</Link>
                 <Link to="/create-post" className="create-post-link">Create a Post!</Link>
-                <Link to="/suggesstions" className="suggestions-link">Suggestions</Link>
+                <Link to="/suggestions" className="suggestions-link">Suggestions</Link>
               </nav>
             </nav>
 
           <div className="post-feedback">
             <p>{this.props.author}</p>
+            <p>{this.props.title}</p>
             <p>{this.props.body}</p>
             <p>{this.props.created_at}</p>
-            <p>{this.props.stars}</p>
+           <p>{this.props.stars}</p>
           </div>
         </div>
     );

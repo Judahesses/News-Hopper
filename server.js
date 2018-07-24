@@ -44,7 +44,7 @@ app.post('/posts', (request, response) => {
     })
 })
 
-app.get('/posts/:id', (request, response) => {
+app.get('/posts/:id.json', (request, response) => {
   const id = Number(request.params.id)
   Promise.all([
     Post.findById(id)
@@ -58,6 +58,7 @@ app.get('/posts/:id', (request, response) => {
       })
   ])
     .then(([posts, topics]) => {
+      // response.json(posts)
       response.render('posts/edit', { posts: posts, topics: topics })
     })
 })

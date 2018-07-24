@@ -1,4 +1,4 @@
-const db = require('../db/connection')
+const db = require('../database/connection')
 
 const Post = {}
 
@@ -49,4 +49,4 @@ Post.stars = post => {
   )
 }
 
-module.exports = Post
+module.exports = Post;

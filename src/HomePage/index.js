@@ -28,11 +28,11 @@ class HomePage extends Component {
           <Link to="/science" className="science-link-home">Science</Link>
           </a>
         </div>  
-         <div className='feedback-container'>
+        <div className='feedback-container'>
             <a href='/feedback' className="feedback">
             <Link to="/feedback" className="feedback-link-home">Feedback</Link>
             </a>
-          </div>
+        </div>
     </div> 
     );
   }

@@ -16,7 +16,7 @@ CREATE TABLE posts (
     topic_id INTEGER REFERENCES topics(id),
     stars INTEGER,
     author TEXT,
-    created_at TEXT,
+    created_at TIMESTAMP,
     title TEXT,
     body TEXT
 );
