@@ -65,8 +65,9 @@ class CreatePost extends Component {
                 <nav className='nav'>
                     <p><Link className='home' to='/'>Home</Link></p>
                     <nav className='nav-categories'>
-                        <Link to="/reviews" className="reviews-link">Reviews</Link>
-                        <Link to="/suggestions" className="suggestions-link">Suggestions</Link>
+                        {/* <Link to="/reviews" className="reviews-link">Reviews</Link> */}
+                        {/* <Link to="/suggestions" className="suggestions-link">Suggestions</Link> */}
+                        <Link to="/feedback" className="reviews-link">Reviews</Link> 
                     </nav>
                 </nav>
 
