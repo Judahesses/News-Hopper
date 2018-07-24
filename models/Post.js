@@ -8,12 +8,12 @@ Post.all = () => {
   )
 }
 
-// Post.create = newPost => {
-//   return db.one(
-//     "INSERT INTO posts (topic_id, stars, author, created_at, title, body) VALUES ($<topic_id>, $<stars>, $<author>, $<created_at>, $<title>, $<body>) RETURNING *",
-//     newPost
-//   )
-// }
+Post.create = newPost => {
+  return db.one(
+    "INSERT INTO posts (stars, author, title, body) VALUES ($<stars>, $<author>, $<title>, $<body>) RETURNING *",
+    newPost
+  )
+}
 
 // Post.findById = id => {
 //   return db.one(

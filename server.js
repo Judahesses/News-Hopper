@@ -36,14 +36,17 @@ app.get('/reviews.json', (request, response) => {
 //     })
 // })
 
-// app.post('/posts', (request, response) => {
-//   const newPost = request.body
-//   newPost.created_at = new Date()
-//   Post.create(newPost)
-//     .then(post => {
-//       response.redirect(302, '/')
-//     })
-// })
+app.post('/posts', (request, response) => {
+  const newPost = {
+    author: request.body.author,
+    stars: request.body.stars,
+    title: request.body.title,
+    body: request.body.body
+  };
+  Post.create(newPost).then(post => {
+    response.json(post);
+  });
+});
 
 // app.get('/posts/:id', (request, response) => {
 //   const id = Number(request.params.id)

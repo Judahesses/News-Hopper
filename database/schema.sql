@@ -13,7 +13,7 @@ CREATE TABLE topics (
 
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY NOT NULL,
-    topic_id INTEGER REFERENCES topics(id),
+    -- topic_id INTEGER REFERENCES topics(id),
     stars INTEGER,
     author TEXT,
     created_at TIMESTAMP,

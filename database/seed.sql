@@ -5,11 +5,9 @@ DELETE FROM posts;
 
 INSERT INTO topics (name) VALUES ('Review');
 INSERT INTO topics (name) VALUES ('Suggestion');
-INSERT INTO topics (name) VALUES ('Other');
 
-INSERT INTO posts (topic_id, stars, author, title, body)
+INSERT INTO posts (stars, author, title, body)
 VALUES (
-   1,
    4,
    'Alex Vargas',
   --  'Today at 11:52 AM',
