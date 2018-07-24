@@ -1,43 +1,21 @@
 import React, { Component } from "react";
 import "./style.css";
 import { BrowserRouter as Router, Route} from "react-router-dom";
-import TechnologyPage from '../TechnologyPage';
-import BusinessPage from '../BusinessPage';
-import PoliticsPage from '../PoliticsPage';
-import EntertainmentPage from '../EntertainmentPage';
-import SportsPage from '../SportsPage';
-import SciencePage from '../SciencePage';
 import HomePage from "../HomePage";
-import BookmarkPage from "../BookmarkPage";
-import SinglePage from "../SinglePage";
-
+import CategoryPage from '../CategoryPage'
 
 class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-
-    }
-  }
-  articleOnClick = (article) => {
-    console.log('App.js', article)
-    this.setState ({
-      currentArticle: article
-    }, console.log('state:', this.state))
-  }
  render() {
    return(
     <Router>
       <div className="App">
         <Route exact path='/' component={HomePage} />
-        <Route path='/technology' render={(props) => <TechnologyPage articleOnClick={this.articleOnClick} /> } />
-         <Route path='/business' render={(props) => <BusinessPage articleOnClick={this.articleOnClick} />} />
-         <Route path='/politics' render={(props) => <PoliticsPage articleOnClick={this.articleOnClick} />} />
-         <Route path='/entertainment' render={(props) => <EntertainmentPage articleOnClick={this.articleOnClick} />} />
-         <Route path='/sports' render={(props) => <SportsPage articleOnClick={this.articleOnClick} />} />
-         <Route path='/science' render={(props) => <SciencePage articleOnClick={this.articleOnClick} />} />
-        <Route path='/article' render={(props) => <SinglePage  currentArticle={this.state.currentArticle}/> } />
-        <Route path='/bookmarks' render={(props) => <BookmarkPage/> } />
+        <Route path='/technology' component={CategoryPage} />
+         <Route path='/business' component={CategoryPage} />
+         <Route path='/politics' component={CategoryPage} />
+         <Route path='/entertainment' component={CategoryPage} />
+         <Route path='/sports' component={CategoryPage} />
+         <Route path='/science' component={CategoryPage} />
       </div>
     </Router>
    );

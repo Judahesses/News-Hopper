@@ -8,6 +8,9 @@ const Comment = require('./models/Comment');
 const jsonParser = bodyParser.json();
 app.use(jsonParser);
 
+// Create, Read All, Update, Delete >> Comments
+// Tommy is working on this
+
 app.listen(PORT, () => {
   console.log(`Express web server listening on port ${PORT}`);
 });

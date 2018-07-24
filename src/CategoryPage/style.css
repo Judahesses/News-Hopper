@@ -1,12 +1,11 @@
-.PoliticsPage .business-link, .science-link, .entertainment-link, .technology-link, .sports-link {
+.CategoryPage .business-link, .entertainment-link, .science-link, .politics-link, .technology-link, .sports-link {
    color: black;
 }
 
-.PoliticsPage .business-link:hover, .science-link:hover, .entertainment-link:hover, .technology-link:hover, .sports-link:hover {
+.CategoryPage .business-link:hover, .entertainment-link:hover, .science-link:hover, .politics-link:hover, .technology-link:hover, .sports-link:hover {
    text-decoration: underline;
 }
-
-.PoliticsPage .nav-categories {
+.CategoryPage .nav-categories {
    display: flex;
    justify-content: space-evenly;
    margin: 35px 30px 0px 30px;
@@ -14,61 +13,51 @@
    border-bottom: 1px solid black;
    padding: 10px;
 }
-
-.PoliticsPage .page-title {
+.CategoryPage .page-title {
    text-align: center;
    margin: 30px auto;
    font-size: 40px;
 }
-
-.PoliticsPage .container {
+.CategoryPage .container {
    display: grid;
    grid-gap: 10px;
    grid-template-columns: repeat(2, 4fr);
    grid-template-rows: 220px 220px 220px 220px 220px 220px 220px 220px 220px;
    margin: 0 30px;
 }
-
-.PoliticsPage .title {
+.CategoryPage .title {
    font-size: 20px;
    text-decoration: none;
    color: black;
    margin-left: 5px;
    margin-top: 5px;
 }
-
-.PoliticsPage .title:hover { 
+.CategoryPage .title:hover { 
    text-decoration: underline;
    cursor: pointer;
 }
-
-.PoliticsPage .time {
+.CategoryPage .time {
    font-size: 15px;
    margin-top: -10px;
    margin-left: 5px;
    font-weight: lighter;
 }
-
-.PoliticsPage .politics-news {
+.CategoryPage .category-news {
    border: 1px solid gray;
    box-shadow: 3px 3px 3px black;
    padding-top: -60px;
-   
 }
-
-.PoliticsPage .img {
+.CategoryPage .img {
    width: 140px;
    height: 120px; 
    float: left;
    margin-left: 5px;
 }
-
-.PoliticsPage .description {
+.CategoryPage .description {
    margin: -4px 10px 0px 10px;
    font-weight: lighter;
 }
-
-.PoliticsPage .img-description {
+.CategoryPage .img-description {
    display: flex;
    align-self: flex-start;
    margin-top: -15px;

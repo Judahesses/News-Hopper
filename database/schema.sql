@@ -22,4 +22,4 @@ CREATE TABLE comments (
    author TEXT,
    body TEXT,
    created_at TIMESTAMP
-)
+);
