@@ -4,7 +4,7 @@ CREATE DATABASE newshopper;
 \c newshopper
 
 DROP TABLE IF EXISTS topics;
-DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS posts;
 
 CREATE TABLE topics (
    id SERIAL PRIMARY KEY,
