@@ -29,12 +29,12 @@ Post.update = updatePost => {
   )
 }
 
-// Post.delete = id => {
-//   return db.result(
-//     "DELETE FROM posts WHERE id = $<id>",
-//     { id: id }
-//   )
-// }
+Post.delete = id => {
+  return db.result(
+    "DELETE FROM posts WHERE id = $<id>",
+    { id: id }
+  )
+}
 
 // Post.allByTopicId = topic_id => {
 //   return db.any("SELECT * FROM posts WHERE topic_id = ${topic_id} ORDER BY created_at DESC",

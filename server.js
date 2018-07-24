@@ -86,22 +86,28 @@ app.get('/posts/:id.json', (request, response) => {
 //     })
 // })
 
-// app.put('/posts/:id', (request, response) => {
-//   const updatePost = request.body
-//   updatePost.id = request.params.id
-//   Post.update(updatePost)
-//     .then(post => {
-//       response.redirect(302, '/')
-//     })
-// })
+app.put('/posts/:id.json', (request, response) => {
+  let id = request.params.id;
+  const updatedPost = {
+    id: id,
+    author: request.body.author,
+    stars: request.body.stars,
+    title: request.body.title,
+    body: request.body.body
+  }
+  Post.update(updatedPost)
+    .then(post => {
+      response.json(post)
+    });
+  });
 
-// app.delete('/posts/:id', (request, response) => {
-//   const id = Number(request.params.id)
-//   Post.delete(id)
-//     .then(post => {
-//       response.redirect(302, '/');
-//     })
-// })
+app.delete('/posts/:id.json', (request, response) => {
+  const id = request.params.id
+  Post.delete(id)
+    .then(post => {
+      response.json(post);
+    })
+})
 
 // app.get("/topics/:id", (request, response) => {
 //   const id = Number(request.params.id);

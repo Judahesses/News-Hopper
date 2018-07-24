@@ -12,6 +12,7 @@ class EditPost extends Component {
         title: '',
         body: '',
         updated: false,
+        deleted: false
       }
     }
   
@@ -53,34 +54,39 @@ class EditPost extends Component {
         });
     }
   
-    // onDelete(evt) {
-    //   fetch(`/video-games/${this.props.match.params.id}.json`, {
-    //     method: 'DELETE',
+    onDelete(evt) {
+      fetch(`/posts/${this.props.match.params.id}.json`, {
+        method: 'DELETE',
         
-    //   }).then(response => response.json)
-    //   .then(videoGame => {
-    //     this.setState({
-    //       deleted: true
-    //     })
-    //   })
+      }).then(response => response.json)
+      .then(post => {
+        this.setState({
+          deleted: true
+        })
+      })
      
-    // }
+    }
   
     render() {
-        return(
+            if(this.state.updated || this.state.deleted) {
+                return <Redirect to='/feedback' />;
+            }
+            return (
             <div className='CreatePost'>
                 <nav className='nav'>
                     <p><Link className='home' to='/'>Home</Link></p>
                     <nav className='nav-categories'>
-                        <Link to="/reviews" className="reviews-link">Reviews</Link>
-                        <Link to="/suggestions" className="suggestions-link">Suggestions</Link>
+                        {/* <Link to="/reviews" className="reviews-link">Reviews</Link>
+                        <Link to="/suggestions" className="suggestions-link">Suggestions</Link> */}
+                         <Link to="/create-post" className="create-post-link">Write a Review!</Link>
+                         <Link to="/feedback" className="reviews-link">Reviews</Link> 
                     </nav>
                 </nav>
 
                 <div className="create-post-form">
                     <div className="form">
 
-                        <form onChange={this.onFormChange} onSubmit={this.onFormSubmit} >
+                        <form onChange={evt => this.onFormChange(evt)}>
                 <div>
                     <label htmlFor="name">Your Name: </label>
                     <input
@@ -119,11 +125,11 @@ class EditPost extends Component {
                     />
                 </div>
                 <div>
-                    <input
-                    type="submit"
-                    value="Add Post"
-                    />
+                    <button type="button" onClick={evt => this.onSubmitClick(evt)}>Submit</button>
                 </div>
+                        </form>
+                    <form> 
+                        <button type="button" onClick={evt => this.onDelete(evt)}>Delete</button>
                         </form>
                     </div>
                 </div>

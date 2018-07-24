@@ -47,9 +47,10 @@ class FeedbackPage extends Component {
             <div className="feedback-container">
             <p>{review.stars}</p>
             <p>{review.author}</p>
-            <p>{review.created_at}</p>
             <p>{review.title}</p>
             <p>{review.body}</p>
+            <p>{review.created_at}</p>
+            <Link to={`/edit-post/${review.id}`}>Edit</Link>
             </div>
             )
          })}
