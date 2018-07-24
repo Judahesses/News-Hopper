@@ -113,6 +113,3 @@ app.get("/topics/:id", (request, response) => {
 app.listen(PORT, () => {
   console.log(`Express web server listening on port ${PORT}`);
 });
-
-
-
