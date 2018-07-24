@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import moment from 'moment';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import CreatePost from '../CreatePost';
 
 
 //adapted from building example
@@ -27,6 +28,7 @@ class FeedbackPage extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
           <div className='FeedbackPage'>
             <nav className='nav'>
@@ -34,7 +36,7 @@ class FeedbackPage extends Component {
               <nav className='nav-categories'>
                 <Link to="/reviews" className="reviews-link">Reviews</Link>
                 <Link to="/create-post" className="create-post-link">Create a Post!</Link>
-                <Link to="/suggesstions" className="suggestions-link">Suggestions</Link>
+                <Link to="/suggestions" className="suggestions-link">Suggestions</Link>
               </nav>
             </nav>
 

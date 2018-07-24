@@ -49,4 +49,4 @@ Post.all = () => {
 //   )
 // }
 
-module.exports = Post
+module.exports = Post;

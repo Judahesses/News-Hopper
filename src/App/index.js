@@ -5,6 +5,7 @@ import CategoryPage from '../CategoryPage';
 import FeedbackPage from '../FeedbackPage';
 import Footer from '../Footer';
 import { BrowserRouter as Router, Route} from "react-router-dom";
+import CreatePost from "../CreatePost";
 
 class App extends Component {
  render() {
@@ -19,6 +20,7 @@ class App extends Component {
          <Route path='/sports' component={CategoryPage} />
          <Route path='/science' component={CategoryPage} />
          <Route path='/feedback' component={FeedbackPage} />
+         <Route path='/create-post' component={CreatePost} />
          <Footer />
       </div>
     </Router>
