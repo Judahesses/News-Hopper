@@ -15,19 +15,19 @@ Post.create = newPost => {
   )
 }
 
-// Post.findById = id => {
-//   return db.one(
-//     "SELECT * FROM posts WHERE id = $<id>",
-//     { id: id }
-//   )
-// }
+Post.findById = id => {
+  return db.one(
+    "SELECT * FROM posts WHERE id = $<id>",
+    { id: id }
+  )
+}
 
-// Post.update = updatePost => {
-//   return db.one(
-//     "UPDATE posts SET topic_id = $<topic_id>, stars = $<stars>, author = $<author>, title = $<title>,body = $<body> WHERE id = $<id> RETURNING *",
-//     updatePost
-//   )
-// }
+Post.update = updatePost => {
+  return db.one(
+    "UPDATE posts SET topic_id = $<topic_id>, stars = $<stars>, author = $<author>, title = $<title>,body = $<body> WHERE id = $<id> RETURNING *",
+    updatePost
+  )
+}
 
 // Post.delete = id => {
 //   return db.result(
