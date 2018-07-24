@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./style.css";
-import { BrowserRouter as Router, Route} from "react-router-dom";
 import HomePage from "../HomePage";
 import CategoryPage from '../CategoryPage'
+import FeedbackPage from '../FeedbackPage'
+import { BrowserRouter as Router, Route} from "react-router-dom";
 
 class App extends Component {
  render() {
@@ -16,6 +17,7 @@ class App extends Component {
          <Route path='/entertainment' component={CategoryPage} />
          <Route path='/sports' component={CategoryPage} />
          <Route path='/science' component={CategoryPage} />
+         <Route path='/feedback' component={FeedbackPage} />
       </div>
     </Router>
    );
