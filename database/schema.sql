@@ -3,23 +3,20 @@ CREATE DATABASE newshopper;
 
 \c newshopper
 
-DROP TABLE IF EXISTS articles;
-DROP TABLE IF EXISTS comments;
+DROP TABLE IF EXISTS topics;
+DROP TABLE IF EXISTS reviews;
 
-CREATE TABLE articles (
-    id SERIAL PRIMARY KEY NOT NULL,
-    title TEXT,
-    urlToImage TEXT,
-    author TEXT,
-    publishedAt TEXT,
-    description TEXT,
-    url TEXT
+CREATE TABLE topics (
+   id SERIAL PRIMARY KEY,
+   name TEXT
 );
 
-CREATE TABLE comments (
-   id SERIAL PRIMARY KEY NOT NULL,
-   article_id INTEGER REFERENCES articles(id),
-   author TEXT,
-   body TEXT,
-   created_at TIMESTAMP
+CREATE TABLE posts (
+    id SERIAL PRIMARY KEY NOT NULL,
+    topic_id INTEGER REFERENCES topics(id),
+    stars INTEGER,
+    author TEXT,
+    created_at TEXT,
+    title TEXT,
+    body TEXT
 );
