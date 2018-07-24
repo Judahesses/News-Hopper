@@ -74,18 +74,6 @@ class CreatePost extends Component {
                     <div className="form">
 
                         <form onChange={this.onFormChange} onSubmit={this.onFormSubmit} >
-                            {/* <div>
-                            <label htmlFor="feedback">Feedback: </label>
-                            <select>
-                            type="text"
-                            name="topic_id"
-                            alt=""
-                            value={this.state.topic_id}
-                            required
-                            <option value="">-</option>
-                            <option value="topic_id">{this.state.topic_id}</option>
-                            </select>
-                    </div> */}
                 <div>
                     <label htmlFor="name">Your Name: </label>
                     <input
@@ -129,13 +117,6 @@ class CreatePost extends Component {
                     value="Add Post"
                     />
                 </div>
-
-
-                        <form>
-                            Your Feedback:
-                            <input type="text" name="feedback"/>
-                            <input type="submit" name="Submit" action="/feedback"/>
-
                         </form>
                     </div>
                 </div>
