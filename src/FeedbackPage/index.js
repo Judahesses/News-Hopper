@@ -34,16 +34,16 @@ class FeedbackPage extends Component {
             <nav className='nav'>
               <p><Link className='home' to='/'>Home</Link></p>
               <nav className='nav-categories'>
-                <Link to="/reviews" className="reviews-link">Reviews</Link>
-                <Link to="/create-post" className="create-post-link">Create a Post!</Link>
-                <Link to="/suggestions" className="suggestions-link">Suggestions</Link>
+                {/* <Link to="/reviews" className="reviews-link">Reviews</Link> */}
+                <Link to="/create-post" className="create-post-link">Write a Review!</Link>
+                {/* <Link to="/suggestions" className="suggestions-link">Suggestions</Link> */}
               </nav>
             </nav>
 
           <div className="post-feedback">
           {this.state.reviews.map(review => {
             return (
-            <div>
+            <div className="feedback-container">
             <p>{review.stars}</p>
             <p>{review.author}</p>
             <p>{review.created_at}</p>
