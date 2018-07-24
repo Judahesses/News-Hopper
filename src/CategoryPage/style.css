@@ -32,7 +32,7 @@
    margin-left: 5px;
    margin-top: 5px;
 }
-.CategoryPage .title:hover { 
+.CategoryPage .title:hover {
    text-decoration: underline;
    cursor: pointer;
 }
@@ -49,7 +49,7 @@
 }
 .CategoryPage .img {
    width: 140px;
-   height: 120px; 
+   height: 120px;
    float: left;
    margin-left: 5px;
 }
