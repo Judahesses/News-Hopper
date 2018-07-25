@@ -26,7 +26,7 @@
     justify-content: center;
 }
 
-.EditPost .name-input, .rating-input, .title-input {
+.EditPost .name-input, .title-input {
     padding: 7px 12px;
     width: 294px;
     border: .5px solid black;
@@ -34,8 +34,12 @@
     margin: 5px
 }
 
-.EditPost .name-input, .rating-input, .title-input, .body-input {
+.EditPost .name-input, .title-input, .body-input {
     outline: none;
+}
+
+.EditPost .rating-input {
+    margin-left: 110px;
 }
 
 .EditPost .body-input {

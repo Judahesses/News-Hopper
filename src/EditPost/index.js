@@ -108,7 +108,8 @@ class EditPost extends Component {
                             />
                             </div>
                             <div>
-                        <p>Rating: <StarRatingComponent
+                        <p><StarRatingComponent
+                          className="rating-input"
                           name="stars"
                           starCount={5}
                           value={this.state.stars}
