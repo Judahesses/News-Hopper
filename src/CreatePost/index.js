@@ -71,56 +71,65 @@ class CreatePost extends Component {
                         <Link to="/feedback" className="reviews-link">Reviews</Link>
                     </nav>
                 </nav>
-
-                <div className="create-post-form">
-                    <div className="form">
-
-                        <form onChange={this.onFormChange} onSubmit={this.onFormSubmit} >
-                <div>
-                    <label htmlFor="name">Your Name: </label>
-                    <input
-                    type="text"
-                    name="author"
-                    placeholder="Your name..."
-                    value={this.state.author}
-                    required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="year_built">Rating: </label>
-                    <input
-                    type="text"
-                    name="stars"
-                    placeholder="Rating 1-5"
-                    value={this.state.stars}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="city">Title: </label>
-                    <input
-                    type="text"
-                    name="title"
-                    placeholder="City Name"
-                    value={this.state.title}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="architect">Building Architect: </label>
-                    <input
-                    type="text"
-                    name="body"
-                    placeholder="Building Architect"
-                    value={this.state.body}
-                    />
-                </div>
-                <div>
-                    <input
-                    type="submit"
-                    value="Add Post"
-                    />
-                </div>
-                        </form>
-                    </div>
+                <h2 className="create-post-title">Write a Review!</h2>
+                <div className="create-post-container">
+                    <form onChange={this.onFormChange} onSubmit={this.onFormSubmit} >
+                        <div>
+                            <label htmlFor="name">
+                            </label>
+                            <input
+                            className="name-input"
+                            type="text"
+                            name="author"
+                            placeholder="Your name..."
+                            autocomplete="off"
+                            value={this.state.author}
+                            required
+                            />
+                            </div>
+                            <div>
+                            <input
+                            className="rating-input" 
+                            type="text"
+                            name="stars"
+                            placeholder="Rating 1-5..."
+                            autocomplete="off"
+                            value={this.state.stars}
+                            required
+                            />
+                            </div>
+                            <div>
+                            <input
+                            className="title-input"
+                            type="text"
+                            name="title"
+                            placeholder="Title..."
+                            autocomplete="off"
+                            value={this.state.title}
+                            required
+                            />
+                            </div>
+                            <div>
+                            <textarea
+                            rows="5"
+                            cols="50"
+                            className="body-input" 
+                            type="text"
+                            name="body"
+                            placeholder="Description..."
+                            autocomplete="off"
+                            value={this.state.body}
+                            required
+                            />
+                            </div>
+                            <div>
+                            <input 
+                            className="add-post"
+                            type="submit"
+                            value="Add Post"
+                            />
+                        </div>
+                    </form>
                 </div>
             </div>
         );

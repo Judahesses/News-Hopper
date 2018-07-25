@@ -72,7 +72,7 @@ class EditPost extends Component {
                 return <Redirect to='/feedback' />;
             }
             return (
-            <div className='CreatePost'>
+            <div className='EditPost'>
                 <nav className='nav'>
                     <p><Link className='home' to='/'>Home</Link></p>
                     <nav className='nav-categories'>
@@ -82,60 +82,71 @@ class EditPost extends Component {
                          <Link to="/feedback" className="reviews-link">Reviews</Link> 
                     </nav>
                 </nav>
-
-                <div className="create-post-form">
+                <h2 className="edit-post-title">Edit Review!</h2>
+                <div className="edit-post-container">
                     <div className="form">
 
                         <form onChange={evt => this.onFormChange(evt)}>
-                <div>
-                    <label htmlFor="name">Your Name: </label>
-                    <input
-                    type="text"
-                    name="author"
-                    placeholder="Your name..."
-                    value={this.state.author}
-                    required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="year_built">Rating: </label>
-                    <input
-                    type="text"
-                    name="stars"
-                    placeholder="Rating 1-5"
-                    value={this.state.stars}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="city">Title: </label>
-                    <input
-                    type="text"
-                    name="title"
-                    placeholder="City Name"
-                    value={this.state.title}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="architect">Building Architect: </label>
-                    <input
-                    type="text"
-                    name="body"
-                    placeholder="Building Architect"
-                    value={this.state.body}
-                    />
-                </div>
-                <div>
-                    <button type="button" onClick={evt => this.onSubmitClick(evt)}>Submit</button>
-                </div>
+                        <div>
+                            <label htmlFor="name">
+                            </label>
+                            <input
+                            className="name-input"
+                            type="text"
+                            name="author"
+                            placeholder="Your name..."
+                            autocomplete="off"
+                            value={this.state.author}
+                            required
+                            />
+                            </div>
+                            <div>
+                            <input
+                            className="rating-input" 
+                            type="text"
+                            name="stars"
+                            placeholder="Rating 1-5..."
+                            autocomplete="off"
+                            value={this.state.stars}
+                            required
+                            />
+                            </div>
+                            <div>
+                            <input
+                            className="title-input"
+                            type="text"
+                            name="title"
+                            placeholder="Title..."
+                            autocomplete="off"
+                            value={this.state.title}
+                            required
+                            />
+                            </div>
+                            <div>
+                            <textarea
+                            rows="5"
+                            cols="50"
+                            className="body-input" 
+                            type="text"
+                            name="body"
+                            placeholder="Description..."
+                            autocomplete="off"
+                            value={this.state.body}
+                            required
+                            />
+                            </div>
+                            <div>
+                            <button className="edit-post" type="button" onClick={evt => this.onSubmitClick(evt)}>Edit Post</button>
+                          </div>
                         </form>
-                    <form> 
-                        <button type="button" onClick={evt => this.onDelete(evt)}>Delete</button>
+                        <form> 
+                          <button className="delete-post" type="button" onClick={evt => this.onDelete(evt)}>Delete Post</button>
                         </form>
                     </div>
                 </div>
             </div>
-        );
-    }
-}
+          );
+        }
+      }
 
 export default EditPost;          

@@ -1,81 +1,63 @@
-.HomePage .app-title {
-    text-align: center;
-    margin-bottom: -50px;
-    margin-top: 50px;
-}
+.EditPost.reviews-link, .suggestions-link {
+    color: black;
+ }
+ 
 
-.HomePage .categories {
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: repeat(3, 6fr);
-    grid-template-rows: 150px;
-    text-align: center;
-    align-content: center;
-    margin: 9%;
-}
-
-.HomePage .tech, .business, .politics, .entertainment, .sports, .science {
-    border: 1px solid black;
-    font-size: 40px;
-    align-self: center;
-    padding: 50px;
-    transition: transform .2s;
-}
-
-.HomePage .tech:hover, .business:hover, .politics:hover, .entertainment:hover, .sports:hover, .science:hover {
-    transform: scale(1.05);
-}
-
-.HomePage .tech {
-    background-image: url('https://s3.envato.com/files/242454786/Preview%20Image%201.jpg');
+.EditPost .reviews-link:hover, .suggestions-link:hover {
+    text-decoration: underline;
  }
 
-.HomePage .business {
-    background-image: url('https://www.amrita.edu/sites/default/files/school-of-business-research.jpg');
+.EditPost .nav-categories {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 35px 30px 0px 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+ }
+
+.EditPost .edit-post-title {
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.HomePage .politics {
-    background-image: url('https://img.freepik.com/free-vector/concept-for-protest-revolution-conflict_1325-267.jpg?size=338&ext=jpg');
-}
-
-.HomePage .entertainment {
-    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/04/35/78/295849108e96940.jpg');
-}
-
-.HomePage .sports {
-    background-image: url('http://www.championdigitaldesign.com/photos/coresportsbg2_home.jpg');
-}
-
-.HomePage .science {
-    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/oA5povt/molecular-structure-science-background-group_rny4txfmg_thumbnail-full01.png');
-}
-
-.HomePage .feedback {
+.EditPost .edit-post-container {
     display: flex;
     justify-content: center;
-    height: 74px;
-    width: 171.75px;
-    background: white;
-    border: 1px solid black;
+}
+
+.EditPost .name-input, .rating-input, .title-input {
+    padding: 7px 12px;
+    width: 294px;
+    border: .5px solid black;
+    border-radius: 5px;
+    margin: 5px
+}
+
+.EditPost .name-input, .rating-input, .title-input, .body-input {
+    outline: none;
+}
+
+.EditPost .body-input {
+    margin: 4px 0px 15px 4px;
+    border-radius: 5px;
+    border: .5px solid black;
+    text-indent: 9px;
+}
+
+.EditPost .edit-post {
     font-size: 20px;
-    align-items: center;
-    transition: transform .2s;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 110px;
+    cursor: pointer;
 }
 
-.HomePage .feedback-container {
-    display: flex;
-    justify-content: center;
-    margin-top: -60px;
-}
-
-.HomePage .feedback:hover {
-    transform: scale(1.05);
-}
-
-.HomePage .tech-link-home, .politics-link-home, .sports-link-home {
-    color: white;
-}
-
-.HomePage .business-link-home, .entertainment-link-home, .science-link-home, .feedback-link-home {
-    color: black;
+.EditPost .delete-post {
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 98px;
+    margin-top: 10px;
+    cursor: pointer;
 }
