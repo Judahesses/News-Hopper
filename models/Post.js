@@ -4,7 +4,7 @@ const Post = {}
 
 Post.all = () => {
   return db.any(
-    "SELECT * FROM posts ORDER BY created_at DESC"
+    "SELECT * FROM posts ORDER BY stars DESC"
   )
 }
 
