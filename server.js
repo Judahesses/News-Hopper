@@ -14,7 +14,7 @@ app.get('/reviews.json', (request, response) => {
     Post.all()
       .then(posts => {
         posts.map(post => {
-          post.created_at = moment(post.created_at).calendar()
+          post.created_at = moment(post.created_at).format('LL')
         })
         return posts
       })
