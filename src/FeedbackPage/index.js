@@ -39,7 +39,7 @@ class FeedbackPage extends Component {
               <nav className='nav-categories'>
                 {/* <Link to="/reviews" className="reviews-link">Reviews</Link> */}
                 <Link to="/create-post" className="create-post-link">Write a Review!</Link>
-                {/* <Link to="/suggestions" className="suggestions-link">Suggestions</Link> */}
+                {/* <Link to="/suggestions"3r className="suggestions-link">Suggestions</Link> */}
               </nav>
             </nav>
 
@@ -56,7 +56,7 @@ class FeedbackPage extends Component {
               />
             <p className="body">{review.body}</p>
             <p className="author">By {review.author}</p>
-            <p className="created-at">{moment(this.state.created_at).format("LL")}</p>
+            <p className="created-at">{moment(review.created_at).format("LL")}</p>
             <Link className="link" to={`/edit-post/${review.id}`}>Edit</Link>
             </div>
             )

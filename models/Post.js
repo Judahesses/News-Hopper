@@ -4,13 +4,13 @@ const Post = {}
 
 Post.all = () => {
   return db.any(
-    "SELECT * FROM posts ORDER BY stars DESC"
+    "SELECT * FROM posts ORDER BY created_at DESC"
   )
 }
 
 Post.create = newPost => {
   return db.one(
-    "INSERT INTO posts (stars, author, title, body) VALUES ($<stars>, $<author>, $<title>, $<body>) RETURNING *",
+    "INSERT INTO posts (stars, author, created_at, title, body) VALUES ($<stars>, $<author>, $<created_at>, $<title>, $<body>) RETURNING *",
     newPost
   )
 }

@@ -18,14 +18,16 @@ app.get('/reviews.json', (request, response) => {
 })
 
 app.post('/posts.json', (request, response) => {
-  console.log(request.body.created_at)
   const newPost = {
     author: request.body.author,
     stars: request.body.stars,
     title: request.body.title,
     body: request.body.body,
+    created_at: new Date()
   };
+  console.log(28, newPost)
   Post.create(newPost).then(post => {
+    console.log(30, newPost)
     response.json(post);
   });
 });
