@@ -13,12 +13,6 @@ app.use(jsonParser);
 app.get('/reviews.json', (request, response) => {
     Post.all()
     .then(posts => {
-      posts.map(post => {
-         post.created_at = moment(post.created_at).calendar()
-      })
-      return posts
-   })
-    .then(posts => {
       response.json({posts})
     })
 })
@@ -31,7 +25,6 @@ app.post('/posts.json', (request, response) => {
     title: request.body.title,
     body: request.body.body,
   };
-  newPost.created_at = newDate();
   Post.create(newPost).then(post => {
     response.json(post);
   });

@@ -55,13 +55,15 @@
     border-radius: 10px;
     margin-left: 110px;
     cursor: pointer;
+    outline: none;
 }
 
 .EditPost .delete-post {
     font-size: 20px;
     border: 1px solid black;
     border-radius: 10px;
-    margin-left: 98px;
+    margin-left: 97px;
     margin-top: 10px;
     cursor: pointer;
+    outline: none;
 }
