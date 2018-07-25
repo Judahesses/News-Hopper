@@ -58,7 +58,6 @@ class EditPost extends Component {
           });
         });
     }
-
     onDelete(evt) {
       fetch(`/posts/${this.props.match.params.id}.json`, {
         method: 'DELETE',
@@ -69,9 +68,7 @@ class EditPost extends Component {
           deleted: true
         })
       })
-
     }
-
     render() {
       const { stars } = this.state;
 
