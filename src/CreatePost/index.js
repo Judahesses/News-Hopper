@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import moment from 'moment';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import StarRatingComponent from 'react-star-rating-component';
 
 class CreatePost extends Component {
   constructor(props) {
@@ -11,15 +12,18 @@ class CreatePost extends Component {
     //   id: 0,
     //   topic_id: "",
       author: "",
-      stars: "",
+      stars: 1,
       title: "",
       body: "",
-      rating: 1,
       created: false
     }
     this.onFormChange = this.onFormChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this)
   }
+
+    onStarClick(nextValue, prevValue, name) {
+        this.setState({ stars: nextValue });
+    }
 
   onFormChange(evt) {
     const element = evt.target;
@@ -56,6 +60,7 @@ class CreatePost extends Component {
     })
 }
     render() {
+        const { stars } = this.state;
         if (this.state.created === true) {
             return(
             <Redirect to="/feedback" />
@@ -88,15 +93,12 @@ class CreatePost extends Component {
                             />
                             </div>
                             <div>
-                            <input
-                            className="rating-input" 
-                            type="text"
-                            name="stars"
-                            placeholder="Rating 1-5..."
-                            autocomplete="off"
-                            value={this.state.stars}
-                            required
-                            />
+                            <p>Rating: <StarRatingComponent
+                                name="stars"
+                                starCount={5}
+                                value={this.state.stars}
+                                onStarClick={this.onStarClick.bind(this)}
+                            /></p>
                             </div>
                             <div>
                             <input
@@ -113,7 +115,7 @@ class CreatePost extends Component {
                             <textarea
                             rows="5"
                             cols="50"
-                            className="body-input" 
+                            className="body-input"
                             type="text"
                             name="body"
                             placeholder="Description..."
@@ -123,7 +125,7 @@ class CreatePost extends Component {
                             />
                             </div>
                             <div>
-                            <input 
+                            <input
                             className="add-post"
                             type="submit"
                             value="Add Post"
