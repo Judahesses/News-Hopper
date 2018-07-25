@@ -59,10 +59,10 @@
 }
 
 .EditPost .delete-post {
-    font-size: 20px;
+    font-size: 21px;
     border: 1px solid black;
     border-radius: 10px;
-    margin-left: 97px;
+    margin-left: 96px;
     margin-top: 10px;
     cursor: pointer;
     outline: none;
