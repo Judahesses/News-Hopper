@@ -42,13 +42,12 @@
   font-size: 30px
 }
 
-
 .FeedbackPage .author {
   font-family: 'Kaushan Script', cursive;
 }
 
 .FeedbackPage .created-at {
-  color: #ddd;
+  color: #A0A0A0;
   text-decoration: none;
 }
 
