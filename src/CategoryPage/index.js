@@ -13,8 +13,10 @@ class CategoryPage extends Component {
     }
   }
   componentDidMount(){
+    // this grabs the path name, deletes the '/'
     let category = window.location.pathname.slice(1);
     console.log(category)
+    // category (path name - '/') is inserted in the category=""
     fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=a78e0b2dba4b489eb46d9605ed082d65`)
     .then(response => response.json())
     .then(data => {
