@@ -1,8 +1,8 @@
-.CreatePost .reviews-link, .suggestions-link {
+.CreatePost .reviews-link {
     color: black;
  }
  
- .CreatePost  .reviews-link:hover, .suggestions-link:hover {
+ .CreatePost  .reviews-link:hover {
     text-decoration: underline;
  }
  .CreatePost .nav-categories {

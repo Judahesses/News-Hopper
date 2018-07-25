@@ -1,9 +1,9 @@
-.EditPost.reviews-link, .suggestions-link {
+.EditPost .create-post-link, .reviews-link {
     color: black;
  }
  
 
-.EditPost .reviews-link:hover, .suggestions-link:hover {
+.EditPost .create-post-link:hover, .reviews-link:hover {
     text-decoration: underline;
  }
 
