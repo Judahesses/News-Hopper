@@ -2,20 +2,25 @@ import React, { Component } from "react";
 import "./style.css";
 import moment from 'moment';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import StarRatingComponent from 'react-star-rating-component';
 
 class EditPost extends Component {
     constructor(props) {
       super(props);
       this.state = {
         author: '',
-        stars: '',
+        stars: 1,
         title: '',
         body: '',
         updated: false,
         deleted: false
       }
     }
-  
+
+  onStarClick(nextValue, prevValue, name) {
+    this.setState({ stars: nextValue });
+  }
+
     componentDidMount() {
       fetch(`/posts/${this.props.match.params.id}.json`)
         .then(response => {
@@ -30,7 +35,7 @@ class EditPost extends Component {
           })
         })
     }
-  
+
     onFormChange(evt) {
       const domElement = evt.target;
       const stateProperty = domElement.getAttribute('name');
@@ -38,7 +43,7 @@ class EditPost extends Component {
       newState[stateProperty] = domElement.value;
       this.setState(newState);
     }
-  
+
     onSubmitClick(evt) {
       fetch(`/posts/${this.props.match.params.id}.json`, {
         method: 'PUT',
@@ -53,21 +58,23 @@ class EditPost extends Component {
           });
         });
     }
-  
+
     onDelete(evt) {
       fetch(`/posts/${this.props.match.params.id}.json`, {
         method: 'DELETE',
-        
+
       }).then(response => response.json)
       .then(post => {
         this.setState({
           deleted: true
         })
       })
-     
+
     }
-  
+
     render() {
+      const { stars } = this.state;
+
             if(this.state.updated || this.state.deleted) {
                 return <Redirect to='/feedback' />;
             }
@@ -79,7 +86,7 @@ class EditPost extends Component {
                         {/* <Link to="/reviews" className="reviews-link">Reviews</Link>
                         <Link to="/suggestions" className="suggestions-link">Suggestions</Link> */}
                          <Link to="/create-post" className="create-post-link">Write a Review!</Link>
-                         <Link to="/feedback" className="reviews-link">Reviews</Link> 
+                         <Link to="/feedback" className="reviews-link">Reviews</Link>
                     </nav>
                 </nav>
                 <h2 className="edit-post-title">Edit Review!</h2>
@@ -101,15 +108,12 @@ class EditPost extends Component {
                             />
                             </div>
                             <div>
-                            <input
-                            className="rating-input" 
-                            type="text"
-                            name="stars"
-                            placeholder="Rating 1-5..."
-                            autocomplete="off"
-                            value={this.state.stars}
-                            required
-                            />
+                        <p>Rating: <StarRatingComponent
+                          name="stars"
+                          starCount={5}
+                          value={this.state.stars}
+                          onStarClick={this.onStarClick.bind(this)}
+                          /></p>
                             </div>
                             <div>
                             <input
@@ -126,7 +130,7 @@ class EditPost extends Component {
                             <textarea
                             rows="5"
                             cols="50"
-                            className="body-input" 
+                            className="body-input"
                             type="text"
                             name="body"
                             placeholder="Description..."
@@ -139,7 +143,7 @@ class EditPost extends Component {
                             <button className="edit-post" type="button" onClick={evt => this.onSubmitClick(evt)}>Edit Post</button>
                           </div>
                         </form>
-                        <form> 
+                        <form>
                           <button className="delete-post" type="button" onClick={evt => this.onDelete(evt)}>Delete Post</button>
                         </form>
                     </div>
@@ -149,4 +153,4 @@ class EditPost extends Component {
         }
       }
 
-export default EditPost;          
+export default EditPost;
