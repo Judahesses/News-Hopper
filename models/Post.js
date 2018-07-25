@@ -4,7 +4,7 @@ const Post = {}
 
 Post.all = () => {
   return db.any(
-    "SELECT * FROM posts"
+    "SELECT * FROM posts ORDER BY created_at DESC"
   )
 }
 
@@ -35,18 +35,5 @@ Post.delete = id => {
     { id: id }
   )
 }
-
-// Post.allByTopicId = topic_id => {
-//   return db.any("SELECT * FROM posts WHERE topic_id = ${topic_id} ORDER BY created_at DESC",
-//     { topic_id: topic_id }
-//   )
-// }
-
-// Post.stars = post => {
-//   return db.one(
-//     "UPDATE posts SET stars = $<stars> WHERE id = $<id> RETURNING *",
-//     post
-//   )
-// }
 
 module.exports = Post;

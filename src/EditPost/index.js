@@ -31,7 +31,7 @@ class EditPost extends Component {
             author: post.author,
             stars: post.stars,
             title: post.title,
-            body: post.body,
+            body: post.body
           })
         })
     }

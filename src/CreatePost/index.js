@@ -11,6 +11,7 @@ class CreatePost extends Component {
     this.state = {
     //   id: 0,
     //   topic_id: "",
+    
       author: "",
       stars: 1,
       title: "",
@@ -40,6 +41,7 @@ class CreatePost extends Component {
     evt.preventDefault();
     const newPost = {
     //   topic_id: this.state.topic_id,
+        // id: this.state.id,
       author: this.state.author,
       stars: this.state.stars,
       title: this.state.title,
