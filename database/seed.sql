@@ -16,12 +16,11 @@ VALUES (
 );
 
 
--- CREATE TABLE posts (
---     id SERIAL PRIMARY KEY NOT NULL,
---     topic_id INTEGER REFERENCES topics(id),
---     stars INTEGER,
---     author TEXT,
---     created_at TEXT,
---     title TEXT,
---     body TEXT
--- );
+INSERT INTO posts (stars, author, title, body)
+VALUES (
+   5,
+   'New York Made',
+  --  'Today at 11:52 AM',
+   'This right here!!!',
+   'This is a beautiful app!'
+);

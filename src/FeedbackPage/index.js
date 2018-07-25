@@ -3,6 +3,8 @@ import "./style.css";
 import moment from 'moment';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import CreatePost from '../CreatePost';
+import StarRatingComponent from "react-star-rating-component";
+
 
 
 //adapted from building example
@@ -29,7 +31,7 @@ class FeedbackPage extends Component {
 
 
   render() {
-    console.log(this.state)
+    const { rating } = this.state;
     return (
           <div className='FeedbackPage'>
             <nav className='nav'>
@@ -45,12 +47,17 @@ class FeedbackPage extends Component {
           {this.state.reviews.map(review => {
             return (
             <div className="feedback-container">
-            <p>{review.stars}</p>
-            <p>{review.author}</p>
-            <p>{review.title}</p>
-            <p>{review.body}</p>
-            <p>{review.created_at}</p>
-            <Link to={`/edit-post/${review.id}`}>Edit</Link>
+            <p className="title">{review.title}</p>
+            <StarRatingComponent
+              name="rate2"
+              editing={false}
+              starCount={5}
+              value={review.stars}
+              />
+            <p className="body">{review.body}</p>
+            <p className="author">By {review.author}</p>
+            <p className="created-at">{moment(review.created_at).format('LL')}</p>
+            <Link className="link" to={`/edit-post/${review.id}`}>Edit</Link>
             </div>
             )
          })}
@@ -60,5 +67,6 @@ class FeedbackPage extends Component {
     }
   }
 
+moment().format('LL');
 
 export default FeedbackPage;

@@ -8,12 +8,13 @@ class CreatePost extends Component {
     super(props);
 
     this.state = {
-      id: 0,
+    //   id: 0,
     //   topic_id: "",
       author: "",
       stars: "",
       title: "",
       body: "",
+      rating: 1,
       created: false
     }
     this.onFormChange = this.onFormChange.bind(this);
@@ -41,7 +42,7 @@ class CreatePost extends Component {
       body: this.state.body
     }
     console.log(newPost);
-    fetch('/posts', {
+    fetch('/posts.json', {
       method: 'POST',
       body: JSON.stringify(newPost),
       headers: {
@@ -56,7 +57,7 @@ class CreatePost extends Component {
 }
     render() {
         if (this.state.created === true) {
-            return( 
+            return(
             <Redirect to="/feedback" />
         )
     }
@@ -67,7 +68,7 @@ class CreatePost extends Component {
                     <nav className='nav-categories'>
                         {/* <Link to="/reviews" className="reviews-link">Reviews</Link> */}
                         {/* <Link to="/suggestions" className="suggestions-link">Suggestions</Link> */}
-                        <Link to="/feedback" className="reviews-link">Reviews</Link> 
+                        <Link to="/feedback" className="reviews-link">Reviews</Link>
                     </nav>
                 </nav>
 
@@ -126,4 +127,4 @@ class CreatePost extends Component {
     }
 }
 
-export default CreatePost;          
+export default CreatePost;

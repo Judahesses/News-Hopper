@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
 .FeedbackPage .reviews-link, .create-post-link, .suggestions-link {
    color: black;
 }
@@ -13,3 +16,100 @@
    border-bottom: 1px solid black;
    padding: 10px;
 }
+
+.FeedbackPage .post-feedback {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.FeedbackPage .feedback-container {
+  text-align: center;
+  border-radius: 25px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  width: 500px;
+  margin-top: 20px;
+  align-self: center;
+  flex-basis: 450px;
+}
+
+.FeedbackPage .title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 30px
+}
+
+
+.FeedbackPage .author {
+  font-family: 'Kaushan Script', cursive;
+}
+
+.FeedbackPage .created-at {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.FeedbackPage .link {
+  display: inline-block;
+  border-radius: 10px;
+  background-color :black;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  opacity: 1;
+}
+
+.FeedbackPage .link:hover {
+  opacity: 0.5;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  box-shadow:
+    1px 1px #53a7ea,
+    2px 2px #53a7ea,
+    3px 3px #53a7ea;
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+
+
+/*
+.FeedbackPage .stars {
+  display: flex;
+  flex-rec
+} */
+/* .Building {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  border: 1px solid #BFBFBF;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  background: #B3FFAB;
+  background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);
+  background: linear-gradient(to right, #12FFF7, #B3FFAB);
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-top: 5px;
+}
+
+.Building-info {
+  padding: 1rem;
+} */
