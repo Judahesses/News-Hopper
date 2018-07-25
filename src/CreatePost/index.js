@@ -45,7 +45,8 @@ class CreatePost extends Component {
       author: this.state.author,
       stars: this.state.stars,
       title: this.state.title,
-      body: this.state.body
+      body: this.state.body,
+      created_at: this.state.date
     }
     console.log(newPost);
     fetch('/posts.json', {
