@@ -3,4 +3,3 @@
 .DS_Store
 package-lock.json
 /src/CategoryPage/config.js 
-.env.deployment
