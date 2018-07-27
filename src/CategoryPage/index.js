@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import moment from 'moment';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
-import config from '../../src/CategoryPage/config'
+import config from './config'
 
 class CategoryPage extends Component {
   constructor(props) {
