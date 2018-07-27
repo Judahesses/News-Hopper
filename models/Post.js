@@ -1,4 +1,4 @@
-const db = require('../database/connection')
+const db = require('../database/connections')
 
 const Post = {}
 

@@ -25,9 +25,7 @@ app.post('/posts.json', (request, response) => {
     body: request.body.body,
     created_at: new Date()
   };
-  console.log(28, newPost)
   Post.create(newPost).then(post => {
-    console.log(30, newPost)
     response.json(post);
   });
 });
