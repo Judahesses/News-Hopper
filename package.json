@@ -1,7 +1,6 @@
 {
   "name": "news-hopper",
   "version": "0.1.0",
-  "proxy": "http://newshopper.herokuapp.com",
   "private": true,
   "dependencies": {
     "bluebird": "^3.5.1",
