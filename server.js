@@ -59,14 +59,6 @@ app.put('/posts/:id.json', (request, response) => {
   });
 })
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('/build'));
-  //to let react-router handle routing in prod.
-  app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, '/build', 'index.html'));
-  });
-}
-
 app.listen(PORT, () => {
   console.log(`Express web server listening on port ${PORT}`);
 });
