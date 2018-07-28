@@ -7,8 +7,7 @@ const Post = require('./models/post')
 const Topic = require('./models/topic')
 const moment = require("moment")
 
-const jsonParser = bodyParser.json();
-app.use(jsonParser);
+app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('/reviews.json', (request, response) => {
     Post.all()
