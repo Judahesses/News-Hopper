@@ -1,13 +1,12 @@
 require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
+const Post = require('./models/Post')
 const app = express();
-const PORT = process.env.PORT || 4567;
-const Post = require('./models/post')
-const Topic = require('./models/topic')
-const moment = require("moment")
 
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
+const PORT = process.env.PORT || 4567;
 
 app.get('/reviews.json', (request, response) => {
     Post.all()
@@ -52,7 +51,7 @@ app.put('/posts/:id.json', (request, response) => {
     author: request.body.author,
     stars: request.body.stars,
     title: request.body.title,
-    body: request.body.body,
+    body: request.body.body
   };
   Post.update(newPost)
     .then(post => {

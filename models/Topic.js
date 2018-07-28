@@ -1,4 +1,4 @@
-const db = require('../database/connections')
+const db = require('../database/connection')
 
 const Topic = {}
 

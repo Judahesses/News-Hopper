@@ -1,6 +1,6 @@
-const db = require('../database/connections')
+const db = require('../database/connection');
 
-const Post = {}
+const Post = {};
 
 Post.all = () => {
   return db.any(
