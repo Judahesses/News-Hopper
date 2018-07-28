@@ -1,6 +1,7 @@
 {
   "name": "news-hopper",
   "version": "0.1.0",
+  "proxy": "http://localhost:4567",
   "private": true,
   "dependencies": {
     "concurrently": "^3.6.0",

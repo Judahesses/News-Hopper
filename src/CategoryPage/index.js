@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./style.css";
 import moment from 'moment';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
-import config from './config'
 
 class CategoryPage extends Component {
   constructor(props) {
@@ -16,10 +15,8 @@ class CategoryPage extends Component {
   componentDidMount(){
     // this grabs the path name, deletes the '/'
     let category = window.location.pathname.slice(1);
-    let myKey = config.MY_KEY;
-    console.log(category)
     // category (path name - '/') is inserted in the category=""
-    fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${myKey}`)
+    fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.REACT_APP_APIKEY}`)
     .then(response => response.json())
       .then(data => {
         console.log(data.articles)
