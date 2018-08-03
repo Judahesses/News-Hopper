@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "concurrently --names \"React,Express\" --prefix-colors \"green,blue\" \"react-scripts start\" \"nodemon server.js\"",
+    "dev": "concurrently --names \"React,Express\" --prefix-colors \"green,blue\" \"react-scripts start\" \"node server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
