@@ -1,4 +1,4 @@
--- \c newshopper;
+\c newshopper;
 
 DELETE FROM topics;
 DELETE FROM posts;
