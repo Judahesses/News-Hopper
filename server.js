@@ -1,8 +1,13 @@
-require('dotenv').config()
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
-const Post = require('./models/Post')
+const Post = require('./models/Post');
+
 const app = express();
+
+// Static hosting for built files
+app.use("/", express.static("./build/"));
 
 app.use(bodyParser.json())
 
@@ -58,6 +63,12 @@ app.put('/posts/:id.json', (request, response) => {
     response.json(post);
   });
 })
+
+if (process.env.NODE_ENV == "production") {
+  app.get("/*", function(request, response) {
+    response.sendFile(path.join(__dirname, "build", "index.html"));
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`Express web server listening on port ${PORT}`);

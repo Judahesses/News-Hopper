@@ -4,11 +4,6 @@ DROP DATABASE newshopper;
 -- DROP TABLE IF EXISTS topics;
 DROP TABLE IF EXISTS posts;
 
--- CREATE TABLE topics (
---    id SERIAL PRIMARY KEY,
---    name TEXT
--- );
-
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY NOT NULL,
     -- topic_id INTEGER REFERENCES topics(id),
