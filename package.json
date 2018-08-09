@@ -1,7 +1,6 @@
 {
   "name": "news-hopper",
   "version": "0.1.0",
-  "proxy": "http://localhost:4567",
   "private": true,
   "dependencies": {
     "bluebird": "^3.5.1",
@@ -18,11 +17,9 @@
     "react-star-rating-component": "^1.4.1"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "concurrently --names \"React,Express\" --prefix-colors \"green,blue\" \"react-scripts start\" \"node server.js\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "eject": "react-scripts eject"
   }
 }
