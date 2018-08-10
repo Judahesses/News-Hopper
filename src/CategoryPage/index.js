@@ -67,7 +67,7 @@ class CategoryPage extends Component {
         </nav>
         <h2 className="page-title">{this.state.categoryName.toUpperCase()}</h2>
         <div className="container">
-          {this.state.categoryNews.map(article => (
+          {this.props.categoryNews.map(article => (
             <div className="category-news">
               <a href={article.url} target="_blank">
                 <h2 className="title">{article.title}</h2>
