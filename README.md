@@ -1,5 +1,7 @@
 # News-Hopper
 
+newshopper.herokuapp.com
+
 News-hopper is a web app where users can visit and catch up on the latest news for multiple topics. Users can also review our site under the feedback section, as well as edit and delete these reviews. Articles are displayed along with their title, short description, and image (all thanks to Newsapi.org). 
 
 We changed our project idea from a site displaying YouTube videos according to category to this. We decided that this would be more useful and that the news api was more intuitive. The only difficult thing we encountered was finding out how to make a project that more effectively fulfilled the grading requirements.
